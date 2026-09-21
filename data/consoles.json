@@ -14,7 +14,7 @@
             "comment": "",
             "tags": [
               { "text": "Original", "tone": "good" },
-              { "text": "RGB-mod", "tone": "good" },
+              { "text": "RGB-mod", "tone": "good" }
             ]
           },
           {
@@ -56,7 +56,7 @@
           },
           { "text": "Mega Man 2 (1988)", "icon": "assets/megaman.png" }
         ]
-      },
+      }
     ]
   },
 
