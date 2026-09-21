@@ -1,0 +1,209 @@
+{
+  "nes": {
+    "icon": "assets/nes.png",
+    "emoji": "🎮",
+    "title": "Nintendo Entertainment System",
+    "desc": "8-битная консоль, 1983 год",
+    "sections": [
+      {
+        "title": "Игры",
+        "items": [
+          {
+            "text": "Super Mario Bros. (1985)",
+            "icon": "assets/mario.png",
+            "comment": "Идеальное состояние картриджа. Всё работает.",
+            "tags": [
+              { "text": "Бокс", "tone": "good" },
+              { "text": "Мануал", "tone": "good" },
+              { "text": "10/10", "tone": "good" }
+            ]
+          },
+          {
+            "text": "The Legend of Zelda (1986)",
+            "icon": "assets/zelda.png",
+            "comment": "Коробка помята, но игра идёт без проблем.",
+            "tags": [
+              { "text": "Бокс", "tone": "warn" },
+              { "text": "9/10", "tone": "good" }
+            ]
+          },
+          {
+            "text": "Metroid (1986)",
+            "icon": "assets/metroid.png",
+            "tags": ["Картридж", "8/10"]
+          },
+          { "text": "Mega Man 2 (1988)", "icon": "assets/megaman.png" }
+        ]
+      },
+      {
+        "title": "Периферия",
+        "items": [
+          {
+            "text": "NES Controller",
+            "icon": "assets/controller-nes.png",
+            "comment": "Оригинальный, шнур целый, кнопки мягкие.",
+            "tags": [{ "text": "Оригинал", "tone": "good" }]
+          },
+          {
+            "text": "NES Zapper (световой пистолет)",
+            "icon": "assets/zapper.png",
+            "comment": "Работает только на CRT-телевизоре.",
+            "tags": [{ "text": "CRT only", "tone": "warn" }]
+          },
+          { "text": "Power Pad" },
+          { "text": "Robotic Operating Buddy (R.O.B.)" }
+        ]
+      }
+    ]
+  },
+
+  "snes": {
+    "icon": "assets/snes.png",
+    "emoji": "🕹️",
+    "title": "Super Nintendo",
+    "desc": "16-битная консоль, 1990 год",
+    "sections": [
+      {
+        "title": "Игры",
+        "items": [
+          {
+            "text": "Super Mario World (1990)",
+            "icon": "assets/smw.png",
+            "comment": "Полный комплект, диск чистый.",
+            "tags": ["Бокс", "Мануал", "10/10"]
+          },
+          {
+            "text": "Chrono Trigger (1995)",
+            "icon": "assets/chrono.png",
+            "comment": "Редкое издание, картридж в идеале. Коробки нет.",
+            "tags": [
+              { "text": "Без бокса", "tone": "warn" },
+              { "text": "10/10", "tone": "good" }
+            ]
+          },
+          { "text": "Super Metroid (1994)" },
+          { "text": "Donkey Kong Country (1994)" }
+        ]
+      },
+      {
+        "title": "Периферия",
+        "items": [
+          { "text": "Super Scope", "comment": "Требует батареек, работают." },
+          { "text": "Super Multitap" },
+          { "text": "Super Game Boy", "tags": ["Работает"] }
+        ]
+      }
+    ]
+  },
+
+  "sega-md": {
+    "icon": "assets/sega-md.png",
+    "emoji": "💠",
+    "title": "Sega Mega Drive",
+    "desc": "16-битная консоль, 1988 год",
+    "sections": [
+      {
+        "title": "Игры",
+        "items": [
+          {
+            "text": "Sonic the Hedgehog 2 (1992)",
+            "icon": "assets/sonic2.png",
+            "comment": "Оригинальный картридж, следы использования на этикетке.",
+            "tags": [
+              { "text": "Потёрт", "tone": "warn" },
+              { "text": "9/10", "tone": "good" }
+            ]
+          },
+          { "text": "Streets of Rage 2 (1992)" },
+          { "text": "Phantasy Star IV (1993)", "comment": "Отсутствует мануал." }
+        ]
+      },
+      {
+        "title": "Периферия",
+        "items": [
+          { "text": "Sega Genesis Controller" },
+          { "text": "Sega CD", "tags": [{ "text": "Не проверен", "tone": "bad" }] },
+          { "text": "32X" }
+        ]
+      }
+    ]
+  },
+
+  "ps1": {
+    "icon": "assets/ps1.png",
+    "emoji": "🎯",
+    "title": "PlayStation",
+    "desc": "32-битная консоль, 1994 год",
+    "sections": [
+      {
+        "title": "Игры",
+        "items": [
+          {
+            "text": "Final Fantasy VII (1997)",
+            "icon": "assets/ff7.png",
+            "comment": "Все 4 диска в идеале, коробка как новая.",
+            "tags": [
+              { "text": "Полный", "tone": "good" },
+              { "text": "10/10", "tone": "good" }
+            ]
+          },
+          {
+            "text": "Metal Gear Solid (1998)",
+            "icon": "assets/mgs.png",
+            "comment": "Диск с микроцарапинами, читается отлично.",
+            "tags": [
+              { "text": "Царапины", "tone": "warn" },
+              { "text": "9/10", "tone": "good" }
+            ]
+          },
+          { "text": "Silent Hill (1999)", "tags": ["Бокс", "Мануал"] },
+          { "text": "Crash Bandicoot (1996)" }
+        ]
+      },
+      {
+        "title": "Периферия",
+        "items": [
+          {
+            "text": "DualShock",
+            "icon": "assets/dualshock.png",
+            "comment": "Аналоговые стики без дрейфа.",
+            "tags": [{ "text": "Оригинал", "tone": "good" }]
+          },
+          { "text": "Memory Card", "tags": ["1 МБ", "Работает"] },
+          { "text": "MultiTap" },
+          { "text": "Light Gun (GunCon)" }
+        ]
+      }
+    ]
+  },
+
+  "dreamcast": {
+    "icon": "assets/dreamcast.png",
+    "emoji": "🌀",
+    "title": "Sega Dreamcast",
+    "desc": "128-битная консоль, 1998 год",
+    "sections": [
+      {
+        "title": "Игры",
+        "items": [
+          { "text": "Shenmue (1999)", "comment": "Все 4 диска, бокс слегка потёрт.", "tags": ["Полный"] },
+          { "text": "Jet Set Radio (2000)" },
+          { "text": "Soulcalibur (1999)", "tags": [{ "text": "10/10", "tone": "good" }] }
+        ]
+      },
+      {
+        "title": "Периферия",
+        "items": [
+          {
+            "text": "VMU (Visual Memory Unit)",
+            "comment": "Экран работает, батарейка требует замены.",
+            "tags": [{ "text": "Батарейка", "tone": "warn" }]
+          },
+          { "text": "Dreamcast Controller" },
+          { "text": "Dreamcast Keyboard" },
+          { "text": "Dreamcast Mouse" }
+        ]
+      }
+    ]
+  }
+}
