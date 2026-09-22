@@ -6,8 +6,8 @@ const DATA_URL = 'data/consoles.json';
 /* ============================================================
    Состояние
    ============================================================ */
-let DATA = {};
-let ITEM_INDEX = {}; // плоский индекс: id -> item
+let SECTIONS = [];       // массив секций верхнего уровня
+let ITEM_INDEX = {};     // плоский индекс: id -> item (для роутинга)
 
 /* ============================================================
    DOM
@@ -68,13 +68,28 @@ async function loadData() {
   try {
     const res = await fetch(DATA_URL, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    DATA = await res.json();
+    const json = await res.json();
+
+    // Поддержка двух форматов:
+    //   { sections: [...] }    — новая структура
+    //   { "nes": {...}, ... }  — старая плоская структура (fallback)
+    if (Array.isArray(json.sections)) {
+      SECTIONS = json.sections;
+    } else {
+      SECTIONS = [{ title: 'Консоли', items: json }];
+    }
 
     // Строим плоский индекс id -> item
     ITEM_INDEX = {};
-    Object.entries(DATA).forEach(([id, item]) => {
-      ITEM_INDEX[id] = item;
+    SECTIONS.forEach(sec => {
+      const items = sec.items || {};
+      Object.entries(items).forEach(([id, item]) => {
+        ITEM_INDEX[id] = item;
+      });
     });
+
+    console.log('Загружено секций:', SECTIONS.length,
+                'пунктов:', Object.keys(ITEM_INDEX).length);
   } catch (err) {
     console.error('Не удалось загрузить данные:', err);
     app.innerHTML = `<div class="loading">Не удалось загрузить данные.<br>${esc(err.message)}</div>`;
@@ -90,15 +105,15 @@ function render() {
 
   if (id && ITEM_INDEX[id]) {
     renderDetail(ITEM_INDEX[id]);
-    headerTitle.textContent = ITEM_INDEX[id].title;
+    headerTitle.textContent = ITEM_INDEX[id].title || 'Без названия';
     backBtn.classList.add('visible');
   } else if (id) {
     renderNotFound(id);
     headerTitle.textContent = 'Не найдено';
     backBtn.classList.add('visible');
   } else {
-    renderList();
-    headerTitle.textContent = 'Консоли';
+    renderHome();
+    headerTitle.textContent = 'Коллекция';
     backBtn.classList.remove('visible');
   }
 
@@ -106,40 +121,65 @@ function render() {
 }
 
 /* ============================================================
-   Главный список
+   Главная — секции с пунктами
    ============================================================ */
 
-function renderList() {
+function renderHome() {
   const wrap = document.createElement('div');
   wrap.className = 'view';
-  const list = document.createElement('div');
-  list.className = 'list';
 
-  Object.entries(DATA).forEach(([id, item], i) => {
-    const el = document.createElement('a');
-    el.className = 'item';
-    el.href = `#/${id}`;
-    el.style.animationDelay = `${i * 40}ms`;
+  let delay = 0;
 
-    el.appendChild(buildIcon(item.icon, item.emoji, item.cover, 'icon'));
+  SECTIONS.forEach(sec => {
+    const sectionEl = document.createElement('section');
+    sectionEl.className = 'section';
 
-    const body = document.createElement('div');
-    body.className = 'item-body';
-    body.innerHTML = `
-      <div class="item-title">${esc(item.title)}</div>
-      <div class="item-sub">${esc(item.desc)}</div>
+    // Заголовок секции
+    const sHeader = document.createElement('div');
+    sHeader.className = 'section-header';
+    sHeader.style.animationDelay = `${delay}ms`;
+    delay += 40;
+
+    const count = Object.keys(sec.items || {}).length;
+    sHeader.innerHTML = `
+      <div class="section-title">${esc(sec.title || '')}</div>
+      <div class="section-count">${count}</div>
     `;
-    el.appendChild(body);
+    sectionEl.appendChild(sHeader);
 
-    const chev = document.createElement('div');
-    chev.className = 'chevron';
-    chev.textContent = '›';
-    el.appendChild(chev);
+    // Список пунктов
+    const list = document.createElement('div');
+    list.className = 'list';
 
-    list.appendChild(el);
+    Object.entries(sec.items || {}).forEach(([id, item]) => {
+      const el = document.createElement('a');
+      el.className = 'item';
+      el.href = `#/${id}`;
+      el.style.animationDelay = `${delay}ms`;
+      delay += 40;
+
+      el.appendChild(buildIcon(item.icon, item.emoji, item.cover, 'icon'));
+
+      const body = document.createElement('div');
+      body.className = 'item-body';
+      body.innerHTML = `
+        <div class="item-title">${esc(item.title || 'Без названия')}</div>
+        <div class="item-sub">${esc(item.desc || '')}</div>
+      `;
+      el.appendChild(body);
+
+      const chev = document.createElement('div');
+      chev.className = 'chevron';
+      chev.textContent = '›';
+      el.appendChild(chev);
+
+      list.appendChild(el);
+    });
+
+    sectionEl.appendChild(list);
+    wrap.appendChild(sectionEl);
   });
 
-  wrap.appendChild(list);
   app.replaceChildren(wrap);
 }
 
@@ -158,15 +198,15 @@ function renderDetail(item) {
 
   const hBody = document.createElement('div');
   hBody.innerHTML = `
-    <div class="detail-title">${esc(item.title)}</div>
-    <div class="detail-desc">${esc(item.desc)}</div>
+    <div class="detail-title">${esc(item.title || 'Без названия')}</div>
+    <div class="detail-desc">${esc(item.desc || '')}</div>
   `;
   header.appendChild(hBody);
   wrap.appendChild(header);
 
-  // Секции
+  // Секции внутри
   let delay = 0;
-  item.sections.forEach(section => {
+  (item.sections || []).forEach(section => {
     const sectionEl = document.createElement('section');
     sectionEl.className = 'section';
 
@@ -175,21 +215,24 @@ function renderDetail(item) {
     sHeader.style.animationDelay = `${delay}ms`;
     delay += 40;
     sHeader.innerHTML = `
-      <div class="section-title">${esc(section.title)}</div>
-      <div class="section-count">${section.items.length}</div>
+      <div class="section-title">${esc(section.title || '')}</div>
+      <div class="section-count">${(section.items || []).length}</div>
     `;
     sectionEl.appendChild(sHeader);
 
     const list = document.createElement('div');
     list.className = 'detail-list';
 
-    section.items.forEach(entry => {
+    (section.items || []).forEach(entry => {
       const el = document.createElement('div');
       el.className = 'detail-item';
       el.style.animationDelay = `${delay}ms`;
       delay += 30;
 
-      const hasExtra = entry.comment || (entry.tags && entry.tags.length);
+      const hasExtra =
+        entry.comment ||
+        (entry.tags && entry.tags.length) ||
+        (entry.links && entry.links.length);
       if (hasExtra) el.classList.add('has-extra');
       if (entry.icon) el.classList.add('with-icon');
 
@@ -200,6 +243,7 @@ function renderDetail(item) {
         el.appendChild(buildIcon(entry.icon, entry.emoji, entry.cover, 'icon'));
       }
 
+      // Заголовок
       const title = document.createElement('div');
       title.className = 'detail-item-title';
       if (entry.url) {
@@ -207,13 +251,14 @@ function renderDetail(item) {
         a.href = entry.url;
         a.target = '_blank';
         a.rel = 'noopener';
-        a.textContent = entry.text;
+        a.textContent = entry.text || '';
         title.appendChild(a);
       } else {
-        title.textContent = entry.text;
+        title.textContent = entry.text || '';
       }
       bodyWrap.appendChild(title);
 
+      // Комментарий
       if (entry.comment) {
         const c = document.createElement('div');
         c.className = 'detail-item-comment';
@@ -221,6 +266,7 @@ function renderDetail(item) {
         bodyWrap.appendChild(c);
       }
 
+      // Теги
       if (entry.tags && entry.tags.length) {
         const tagsWrap = document.createElement('div');
         tagsWrap.className = 'detail-item-tags';
@@ -232,6 +278,31 @@ function renderDetail(item) {
           tagsWrap.appendChild(span);
         });
         bodyWrap.appendChild(tagsWrap);
+      }
+
+      // Ссылки
+      if (entry.links && entry.links.length) {
+        const linksWrap = document.createElement('div');
+        linksWrap.className = 'detail-item-links';
+
+        entry.links.forEach(link => {
+          const a = document.createElement('a');
+          a.className = 'link-card';
+          a.href = link.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+
+          a.innerHTML = `
+            <div class="link-icon">↗</div>
+            <div class="link-body">
+              <div class="link-text">${esc(link.text || '')}</div>
+              ${link.comment ? `<div class="link-comment">${esc(link.comment)}</div>` : ''}
+            </div>
+          `;
+          linksWrap.appendChild(a);
+        });
+
+        bodyWrap.appendChild(linksWrap);
       }
 
       el.appendChild(bodyWrap);
