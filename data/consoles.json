@@ -1,339 +1,1002 @@
 {
+  "entities": {
+    "box-1": {
+      "type": "box",
+      "icon": "assets/box1.png",
+      "emoji": "📦",
+      "title": "Бокс №1 — NES/Famicom",
+      "desc": "11-я секция в стелаже",
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-av-famicom",
+            "fc-dogbone-gamepad",
+            "psu-impulse-9v1a",
+            "scart-rgb-multiout-csync"
+          ]
+        },
+        {
+          "title": "Notes",
+          "items": [
+            "note-boxes-vertical",
+            "note-zapper-battery"
+          ]
+        }
+      ],
+      "tags": [],
+      "links": [],
+      "shelf": 11
+    },
+    "box-2": {
+      "type": "box",
+      "icon": "assets/box2.png",
+      "emoji": "📦",
+      "title": "Бокс №2 — PlayStation",
+      "desc": "10-я секция в стелаже",
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-playstation",
+            "dualshock",
+            "memory-card",
+            "discs-15"
+          ]
+        }
+      ],
+      "tags": [],
+      "links": [],
+      "shelf": 10
+    },
+    "note-boxes-vertical": {
+      "type": "etc",
+      "text": "Коробки хранить вертикально",
+      "tags": [],
+      "links": [],
+      "sections": []
+    },
+    "note-zapper-battery": {
+      "type": "etc",
+      "text": "Проверить батарейки в Zapper",
+      "tags": [
+        {
+          "text": "todo",
+          "tone": "warn"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "discs-15": {
+      "type": "etc",
+      "text": "15 дисков в джевелах",
+      "tags": [],
+      "links": [],
+      "sections": []
+    },
+    "super-gameboy": {
+      "type": "accessory",
+      "text": "Super Game Boy",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "icon": "assets/nintendo/sfc-cartridge.png"
+    },
+    "dualshock": {
+      "type": "gamepad",
+      "text": "DualShock",
+      "icon": "assets/dualshock.png",
+      "comment": "Аналоговые стики без дрейфа.",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "memory-card": {
+      "type": "accessory",
+      "text": "Memory Card",
+      "tags": [
+        {
+          "text": "1mb-memory",
+          "tone": "neutral"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "multitap": {
+      "type": "accessory",
+      "text": "MultiTap",
+      "tags": [],
+      "links": [],
+      "sections": []
+    },
+    "vmu": {
+      "type": "accessory",
+      "text": "VMU (Visual Memory Unit)",
+      "comment": "Экран работает, батарейка требует замены",
+      "tags": [
+        {
+          "text": "battary-dry",
+          "tone": "warn"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "dc-controller": {
+      "type": "gamepad",
+      "text": "Dreamcast Controller",
+      "tags": [],
+      "links": [],
+      "sections": []
+    },
+    "everdrive-n8-pro": {
+      "type": "cartridge",
+      "text": "Krikzz Everdrive N8 Pro",
+      "icon": "assets/nintendo/everdriven8pro.png",
+      "comment": "Флеш-картридж в форм-факторе Fami",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "229-mappers",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Everdrive N8 Pro",
+          "url": "https://krikzz.com/our-products/cartridges/n8-pro-fami.html",
+          "comment": "Информация о флеш-картридже"
+        },
+        {
+          "text": "Файлы N8 Pro-series",
+          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/",
+          "comment": "Все файлы для N8 Pro-series"
+        },
+        {
+          "text": "Инструкция Everdrive N8 Pro",
+          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/n8-pro-manual.pdf",
+          "comment": "PDF, обновление через SD-карту"
+        }
+      ],
+      "sections": []
+    },
+    "scart-rgb-multiout-csync": {
+      "type": "cable",
+      "text": "Кабель Nintendo Multiout Scart RGB CSync",
+      "tags": [
+        {
+          "text": "convert-composite-csync",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "icon": "assets/nintendo/multiout-cable/png"
+    },
+    "zapper-gray": {
+      "type": "accessory",
+      "text": "Famicom Zapper (Gray)",
+      "icon": "assets/nintendo/zapper.png",
+      "tags": [
+        {
+          "text": "replica",
+          "tone": "warn"
+        },
+        {
+          "text": "only-crt",
+          "tone": "warn"
+        },
+        {
+          "text": "sound-effect",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "console-av-famicom": {
+      "type": "console",
+      "text": "Nintendo AV Famicom",
+      "icon": "assets/nintendo/av-famicom.png",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "url": "https://ir.ozone.ru/s3/multimedia-1-7/c400/9661134715.jpg",
+      "cover": true,
+      "emoji": ""
+    },
+    "ps1": {
+      "type": "etc",
+      "icon": "assets/ps1.png",
+      "emoji": "🎯",
+      "title": "Sony PlayStation",
+      "desc": "32-bit, 5-gen, Japan, 1994",
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-playstation",
+            "dualshock",
+            "memory-card",
+            "guncon-lightgun"
+          ]
+        },
+        {
+          "title": "Games",
+          "items": []
+        }
+      ],
+      "tags": [],
+      "links": []
+    },
+    "avfc": {
+      "type": "etc",
+      "icon": "assets/avfc.png",
+      "emoji": "🎮",
+      "title": "Nintendo AV Famicom",
+      "desc": "8-bit, 3-gen, Japan, 1993",
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-av-famicom",
+            "famicom-disk-system"
+          ]
+        },
+        {
+          "title": "Accessories",
+          "items": [
+            "psu-impulse-9v1a",
+            "everdrive-n8-pro",
+            "8bitdo-n30-gamepad",
+            "zapper-gray",
+            "nes-four-score",
+            "nes-advantage-arcade-pad",
+            "famicom-keyboard"
+          ]
+        },
+        {
+          "title": "Games",
+          "items": [
+            "fc-db-snn-cartridge"
+          ]
+        }
+      ],
+      "tags": [],
+      "links": []
+    },
+    "sfc": {
+      "type": "etc",
+      "icon": "assets/snes.png",
+      "emoji": "🕹️",
+      "title": "Nintendo Super Famicom",
+      "desc": "16-bit, 4-gen, Japan, 1994",
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-super-famicom",
+            "super-gameboy"
+          ]
+        },
+        {
+          "title": "Games",
+          "items": []
+        }
+      ],
+      "tags": [],
+      "links": []
+    },
+    "gen": {
+      "type": "etc",
+      "icon": "assets/sega-md.png",
+      "emoji": "💠",
+      "title": "Sega Genesis",
+      "desc": "16-bit, 4-gen, USA, 1988",
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-genesis",
+            "8bitdo-m30-gamepad"
+          ]
+        },
+        {
+          "title": "Games",
+          "items": []
+        }
+      ],
+      "tags": [],
+      "links": []
+    },
+    "dc": {
+      "type": "etc",
+      "icon": "assets/dreamcast.png",
+      "emoji": "🌀",
+      "title": "Sega Dreamcast",
+      "desc": "32-bit, 6-gen, Japan, 1998",
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-sega-dreamcast",
+            "vmu",
+            "dc-controller"
+          ]
+        },
+        {
+          "title": "Games",
+          "items": []
+        }
+      ],
+      "tags": [],
+      "links": [],
+      "text": ""
+    },
+    "console-playstation": {
+      "type": "console",
+      "text": "PlayStation SCPH-5502",
+      "tags": [
+        {
+          "text": "xstation-mod",
+          "tone": "good"
+        },
+        {
+          "text": "12v-psu-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "title": "Sony PlayStation",
+      "emoji": "🎮",
+      "icon": "assets/sony/playstation.png"
+    },
+    "console-genesis": {
+      "title": "",
+      "desc": "America, Model 1601",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "switchless-unimod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sega Genesis",
+      "emoji": "🎮",
+      "icon": "assets/sega/genesis.png",
+      "cover": true
+    },
+    "console-super-famicom": {
+      "title": "",
+      "desc": "Japan, 1994, SNS-CPU-RGB-01",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "multi-region-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo Super Famicom",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/super-famicom.png",
+      "cover": true
+    },
+    "console-sega-dreamcast": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "gdemu-ode-mod",
+          "tone": "good"
+        },
+        {
+          "text": "12v-psu-mod",
+          "tone": "good"
+        },
+        {
+          "text": "battary-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sega Dreamcast",
+      "emoji": "🎮",
+      "icon": "assets/sega/dreamcast.png"
+    },
+    "fc-dogbone-gamepad": {
+      "type": "gamepad",
+      "text": "DogBone Gamepad",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "wired",
+          "tone": "warn"
+        },
+        {
+          "text": "no-turbo-buttons",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "emoji": "📦",
+      "desc": "2x gamepad",
+      "icon": "assets/nintendo/dogbone.png"
+    },
+    "8bitdo-m30-gamepad": {
+      "type": "gamepad",
+      "text": "8BitDo M30 MD 2.4Ghz",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "6-buttons",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "icon": "assets/sega/8bitdo-m30.png",
+      "emoji": "📦"
+    },
+    "8bitdo-n30-gamepad": {
+      "type": "gamepad",
+      "text": "8BitDo N30 NES 2.4Ghz",
+      "icon": "assets/nintendo/8bitdon30.png",
+      "comment": "Micro-USB ×2, Type-C ×2",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "turbo-buttons",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "emoji": "📦"
+    },
+    "guncon-lightgun": {
+      "type": "gamepad",
+      "text": "GunCon (Light Gun)",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "crt-only",
+          "tone": "warn"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "icon": "assets/sony/guncon.png",
+      "cover": true,
+      "emoji": "📦"
+    },
+    "nes-advantage-arcade-pad": {
+      "type": "gamepad",
+      "text": "NES Advantage (Arcade Pad)",
+      "icon": "assets/nintendo/nes-advantage.png",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "nes-form-factor",
+          "tone": "warn"
+        },
+        {
+          "text": "nes-connector-pins",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "emoji": "📦"
+    },
+    "nes-four-score": {
+      "type": "accessory",
+      "text": "NES Four Score",
+      "icon": "assets/nintendo/fourscore.png",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "nes-form-factor",
+          "tone": "warn"
+        }
+      ],
+      "links": [],
+      "sections": []
+    },
+    "fc-db-snn-cartridge": {
+      "type": "game",
+      "text": "Dragon Ball: Shenron no Nazo",
+      "icon": "assets/nintendo/fc-cartridge.png",
+      "comment": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "box",
+          "tone": "good"
+        },
+        {
+          "text": "manual",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "desc": "Japan, November 27, 1986",
+      "url": "https://dragonball.fandom.com/wiki/Dragon_Ball:_Shenron_no_Nazo"
+    },
+    "sms": {
+      "title": "Sega Master System",
+      "desc": "8-bit, 3-gen, America, 1986",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-master-system",
+            "master-everdrive-x7"
+          ]
+        }
+      ],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sega/master-system.png",
+      "cover": false
+    },
+    "console-master-system": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-built-in",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sega Master System",
+      "icon": "assets/sega/master-system.png",
+      "emoji": "📦"
+    },
+    "master-everdrive-x7": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Master Everdrive X7",
+          "url": "https://krikzz.com/our-products/cartridges/smsx7.html",
+          "comment": "Страница с описанием"
+        },
+        {
+          "text": "Прошивка Master Everdrive X7",
+          "url": "https://krikzz.com/pub/support/master-everdrive/x-series/OS/",
+          "comment": "Страница со списком прошивок"
+        }
+      ],
+      "sections": [],
+      "icon": "assets/sega/sms-cartridge.png",
+      "emoji": "📦",
+      "type": "cartridge",
+      "text": "Master Everdrive X7"
+    },
+    "sat": {
+      "title": "Sega Saturn",
+      "desc": "32-bit, 5-gen, Japan, 1994",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sega/saturn.png",
+      "text": ""
+    },
+    "n64": {
+      "title": "Nintendo 64",
+      "desc": "64-bit, 5-gen, Japan, 1996",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "text": "",
+      "icon": "assets/nintendo/n64.png"
+    },
+    "gc": {
+      "title": "Nintendo Game Cube",
+      "desc": "32-bit, 6-gen, Europe, 2002",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/nintendo/gc.png",
+      "text": ""
+    },
+    "ps2": {
+      "title": "Sony PlayStation 2",
+      "desc": "32/64-bit, 6-gen, Europe, 2013",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sony/ps2.png",
+      "cover": true,
+      "text": ""
+    },
+    "pce": {
+      "title": "NEC PC-Engine",
+      "desc": "8/16-bit, 4-gen, Japan, 1987",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles",
+          "items": [
+            "console-pc-engine"
+          ]
+        },
+        {
+          "title": "Accessories",
+          "items": [
+            "turbo-everdrive-pro"
+          ]
+        }
+      ],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/nec/pce.png",
+      "cover": false
+    },
+    "wii": {
+      "title": "Nintendo Wii",
+      "desc": "32-bit, 7-gen, Europe, 2006",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "asswts/nintendo/wii.png"
+    },
+    "ps3": {
+      "title": "Sony PlayStation 3",
+      "desc": "32-bit, 7-gen, Slim, Europe, 2009",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sony/ps3.png"
+    },
+    "x360": {
+      "title": "Microsoft Xbox 360",
+      "desc": "32-bit, 7-gen, Slim, Europe, 2010 ",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/microsoft/x360.png"
+    },
+    "wiiu": {
+      "title": "Nintendo WiiU",
+      "desc": "32-bit, 8-gen, Europe, 2012",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/nintendo/wiiu.png"
+    },
+    "ps4": {
+      "title": "Sony PlayStation 4",
+      "desc": "64-bit, 8-gen, Slim, Europe, 2013",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sony/ps4.png"
+    },
+    "sw": {
+      "title": "Nintendo Switch",
+      "desc": "64-bit, 8-gen, Europe, 2017",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/nintendo/sw.png",
+      "cover": true
+    },
+    "xsx": {
+      "title": "Microsoft Xbox Series X",
+      "desc": "64-bit, 9-gen, Europe, 2020",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/microsoft/xsx.png"
+    },
+    "ps5": {
+      "title": "Sony PlayStation 5",
+      "desc": "64-bit, 9-gen, Europe, 2020",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/sony/ps5.png"
+    },
+    "sw2": {
+      "title": "Nintendo Switch 2",
+      "desc": "64-bit, 9-gen, Europe, 2025",
+      "tags": [],
+      "links": [],
+      "sections": [],
+      "type": "etc",
+      "emoji": "📦",
+      "icon": "assets/nintendo/sw2.png"
+    },
+    "psu-impulse-9v1a": {
+      "type": "accessory",
+      "text": "Блок питания - 9 вольт 1 ампер",
+      "tags": [
+        {
+          "text": "euro-plug",
+          "tone": "good"
+        },
+        {
+          "text": "110-220v",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "avfc",
+            "sfc",
+            "sms",
+            "gen",
+            "pce"
+          ]
+        }
+      ],
+      "desc": "Подходит для Nintendo Famicom, Super Famicom, Sega Master System, Genesis, NEC PC-Engine",
+      "emoji": "🔌",
+      "icon": "assets/accessory/psu-plug.png"
+    },
+    "turbo-everdrive-pro": {
+      "title": "Krikzz Turbo Everdrive Pro",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        },
+        {
+          "text": "cd-rom-core",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Turbo Everdrive Pro",
+          "url": "https://krikzz.com/our-products/cartridges/turbo-everdrive-pro.html",
+          "comment": "Страница с описанием"
+        },
+        {
+          "text": "Файлы Turbo Pro-series",
+          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/",
+          "comment": "Все файлы для Turbo Pro-series"
+        },
+        {
+          "text": "Инструкция Turbo Everdrive Pro",
+          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/turbo-ed-pro-manual.pdf",
+          "comment": "PDF, обновление через SD-карту"
+        }
+      ],
+      "sections": [],
+      "type": "cartridge",
+      "emoji": "📦",
+      "icon": "assets/nec/hucard.png",
+      "cover": true
+    },
+    "console-pc-engine": {
+      "title": "NEC PC-Engine",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "emoji": "📦",
+      "icon": "assets/nec/pce.png"
+    },
+    "famicom-disk-system": {
+      "title": "Nintendo Famicom Disk System",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "work-strap",
+          "tone": "good"
+        },
+        {
+          "text": " complete-set",
+          "tone": "good"
+        },
+        {
+          "text": "box",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nintendo/fds.png",
+      "cover": true
+    },
+    "famicom-keyboard": {
+      "title": "Famicom Keyboard",
+      "desc": "",
+      "tags": [
+        {
+          "text": "working",
+          "tone": "good"
+        },
+        {
+          "text": "only-keyboard",
+          "tone": "warn"
+        }
+      ],
+      "links": [
+        {
+          "text": "Famicom Basic Keyboard",
+          "url": "https://www.nesdev.org/wiki/Family_BASIC_Keyboard",
+          "comment": "Информация по Famicom Keyboard"
+        }
+      ],
+      "sections": [],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nintendo/keyboard.png"
+    }
+  },
   "sections": [
     {
       "title": "Боксы",
-      "items": {
-        "box-1": {
-          "icon": "assets/box1.png",
-          "emoji": "📦",
-          "title": "Бокс №1 — NES/Famicom",
-          "desc": "Верхняя полка, левый угол",
-          "sections": [
-            {
-              "title": "Содержимое",
-              "items": [
-                { "text": "AV Famicom (HVC-101)", "tags": [{ "text": "Полный", "tone": "good" }] },
-                { "text": "2 × геймпада dogbone" },
-                { "text": "Блок питания оригинальный" },
-                { "text": "Кабель AV" },
-                {
-                  "text": "12 картриджей в боксах",
-                  "comment": "Список в отдельной карточке консоли"
-                }
-              ]
-            },
-            {
-              "title": "Заметки",
-              "items": [
-                { "text": "Коробки хранить вертикально" },
-                {
-                  "text": "Проверить батарейки в Zapper",
-                  "tags": [{ "text": "todo", "tone": "warn" }]
-                }
-              ]
-            }
-          ]
-        },
-        "box-2": {
-          "icon": "assets/box2.png",
-          "emoji": "📦",
-          "title": "Бокс №2 — PlayStation",
-          "desc": "Нижняя полка, центр",
-          "sections": [
-            {
-              "title": "Содержимое",
-              "items": [
-                { "text": "PlayStation SCPH-5502" },
-                { "text": "2 × DualShock" },
-                { "text": "Memory Card 1 МБ" },
-                { "text": "15 дисков в джевелах" }
-              ]
-            }
-          ]
-        }
-      }
+      "items": [
+        "box-1",
+        "box-2"
+      ]
     },
     {
       "title": "Консоли",
-      "items": {
-        "avfc": {
-          "icon": "assets/avfc.png",
-          "emoji": "🎮",
-          "title": "Nintendo AV Famicom",
-          "desc": "8-bit, Japan, 1993",
-          "sections": [
-            {
-              "title": "Оборудование",
-              "items": [
-                {
-                  "text": "AV Famicom",
-                  "icon": "assets/nintendo/av-famicom.png",
-                  "tags": [
-                    { "text": "Оригинал", "tone": "good" },
-                    { "text": "RGB-mod", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "Famicom Zapper (Gray)",
-                  "icon": "assets/nintendo/zapper.png",
-                  "tags": [
-                    { "text": "Только CRT", "tone": "warn" },
-                    { "text": "Реплика", "tone": "warn" },
-                    { "text": "Звуковой эффект", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "Krikzz Everdrive N8 Pro",
-                  "icon": "assets/nintendo/everdriven8pro.png",
-                  "comment": "Флеш-картридж в форм-факторе Fami",
-                  "tags": [
-                    { "text": "Всё-в-одном", "tone": "good" },
-                    { "text": "Качество", "tone": "good" },
-                    { "text": "Турбо-кнопки", "tone": "good" }
-                  ],
-                  "links": [
-                    {
-                      "text": "Официальный сайт Everdrive N8 Pro",
-                      "url": "https://krikzz.com/our-products/cartridges/n8-pro-fami.html",
-                      "comment": "Информация о флеш-картридже"
-                    },
-                    {
-                      "text": "Прошивка N8 Pro-series",
-                      "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/",
-                      "comment": "Все файлы для N8 Pro-series"
-                    },
-                    {
-                      "text": "Инструкция Everdrive N8 Pro",
-                      "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/n8-pro-manual.pdf",
-                      "comment": "PDF, обновление через SD-карту"
-                    }
-                  ]
-                },
-                {
-                  "text": "8BitDo N30 NES 2.4Ghz",
-                  "icon": "assets/nintendo/8bitdon30.png",
-                  "comment": "Micro-USB ×2, Type-C ×2",
-                  "tags": [
-                    { "text": "Беспроводной", "tone": "good" },
-                    { "text": "229 мапперов", "tone": "good" },
-                    { "text": "Save states", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "NES Four Score",
-                  "icon": "assets/nintendo/fourscore.png",
-                  "tags": [
-                    { "text": "Оригинал", "tone": "good" },
-                    { "text": "Форм-фактор NES", "tone": "warn" }
-                  ]
-                },
-                {
-                  "text": "NES Advantage",
-                  "icon": "assets/nintendo/advantage.png",
-                  "tags": [
-                    { "text": "Оригинал", "tone": "good" },
-                    { "text": "Форм-фактор NES", "tone": "warn" },
-                    { "text": "Другие пины (не Famicom)", "tone": "bad" }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Игры",
-              "items": [
-                {
-                  "text": "Super Mario Bros. (1985)",
-                  "icon": "assets/mario.png",
-                  "comment": "Идеальное состояние картриджа. Всё работает.",
-                  "tags": [
-                    { "text": "Бокс", "tone": "good" },
-                    { "text": "Мануал", "tone": "good" },
-                    { "text": "10/10", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "The Legend of Zelda (1986)",
-                  "icon": "assets/zelda.png",
-                  "comment": "Коробка помята, но игра идёт без проблем.",
-                  "tags": [
-                    { "text": "Бокс", "tone": "warn" },
-                    { "text": "9/10", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "Metroid (1986)",
-                  "icon": "assets/metroid.png",
-                  "tags": ["Картридж", "8/10"]
-                },
-                {
-                  "text": "Mega Man 2 (1988)",
-                  "icon": "assets/megaman.png"
-                }
-              ]
-            }
-          ]
-        },
-
-        "snes": {
-          "icon": "assets/snes.png",
-          "emoji": "🕹️",
-          "title": "Super Nintendo",
-          "desc": "16-битная консоль, 1990 год",
-          "sections": [
-            {
-              "title": "Игры",
-              "items": [
-                {
-                  "text": "Super Mario World (1990)",
-                  "icon": "assets/smw.png",
-                  "comment": "Полный комплект, картридж чистый.",
-                  "tags": ["Бокс", "Мануал", "10/10"]
-                },
-                {
-                  "text": "Chrono Trigger (1995)",
-                  "icon": "assets/chrono.png",
-                  "comment": "Редкое издание, картридж в идеале. Коробки нет.",
-                  "tags": [
-                    { "text": "Без бокса", "tone": "warn" },
-                    { "text": "10/10", "tone": "good" }
-                  ]
-                },
-                { "text": "Super Metroid (1994)" },
-                { "text": "Donkey Kong Country (1994)" }
-              ]
-            },
-            {
-              "title": "Периферия",
-              "items": [
-                { "text": "Super Scope", "comment": "Требует батареек, работают." },
-                { "text": "Super Multitap" },
-                { "text": "Super Game Boy", "tags": ["Работает"] }
-              ]
-            }
-          ]
-        },
-
-        "sega-md": {
-          "icon": "assets/sega-md.png",
-          "emoji": "💠",
-          "title": "Sega Mega Drive",
-          "desc": "16-битная консоль, 1988 год",
-          "sections": [
-            {
-              "title": "Игры",
-              "items": [
-                {
-                  "text": "Sonic the Hedgehog 2 (1992)",
-                  "icon": "assets/sonic2.png",
-                  "comment": "Оригинальный картридж, следы использования на этикетке.",
-                  "tags": [
-                    { "text": "Потёрт", "tone": "warn" },
-                    { "text": "9/10", "tone": "good" }
-                  ]
-                },
-                { "text": "Streets of Rage 2 (1992)" },
-                { "text": "Phantasy Star IV (1993)", "comment": "Отсутствует мануал." }
-              ]
-            },
-            {
-              "title": "Периферия",
-              "items": [
-                { "text": "Sega Genesis Controller" },
-                {
-                  "text": "Sega CD",
-                  "tags": [{ "text": "Не проверен", "tone": "bad" }]
-                },
-                { "text": "32X" }
-              ]
-            }
-          ]
-        },
-
-        "ps1": {
-          "icon": "assets/ps1.png",
-          "emoji": "🎯",
-          "title": "PlayStation",
-          "desc": "32-битная консоль, 1994 год",
-          "sections": [
-            {
-              "title": "Игры",
-              "items": [
-                {
-                  "text": "Final Fantasy VII (1997)",
-                  "icon": "assets/ff7.png",
-                  "comment": "Все 4 диска в идеале, коробка как новая.",
-                  "tags": [
-                    { "text": "Полный", "tone": "good" },
-                    { "text": "10/10", "tone": "good" }
-                  ]
-                },
-                {
-                  "text": "Metal Gear Solid (1998)",
-                  "icon": "assets/mgs.png",
-                  "comment": "Диск с микроцарапинами, читается отлично.",
-                  "tags": [
-                    { "text": "Царапины", "tone": "warn" },
-                    { "text": "9/10", "tone": "good" }
-                  ]
-                },
-                { "text": "Silent Hill (1999)", "tags": ["Бокс", "Мануал"] },
-                { "text": "Crash Bandicoot (1996)" }
-              ]
-            },
-            {
-              "title": "Периферия",
-              "items": [
-                {
-                  "text": "DualShock",
-                  "icon": "assets/dualshock.png",
-                  "comment": "Аналоговые стики без дрейфа.",
-                  "tags": [{ "text": "Оригинал", "tone": "good" }]
-                },
-                { "text": "Memory Card", "tags": ["1 МБ", "Работает"] },
-                { "text": "MultiTap" },
-                { "text": "Light Gun (GunCon)" }
-              ]
-            }
-          ]
-        },
-
-        "dreamcast": {
-          "icon": "assets/dreamcast.png",
-          "emoji": "🌀",
-          "title": "Sega Dreamcast",
-          "desc": "128-битная консоль, 1998 год",
-          "sections": [
-            {
-              "title": "Игры",
-              "items": [
-                {
-                  "text": "Shenmue (1999)",
-                  "comment": "Все 4 диска, бокс слегка потёрт.",
-                  "tags": ["Полный"]
-                },
-                { "text": "Jet Set Radio (2000)" },
-                {
-                  "text": "Soulcalibur (1999)",
-                  "tags": [{ "text": "10/10", "tone": "good" }]
-                }
-              ]
-            },
-            {
-              "title": "Периферия",
-              "items": [
-                {
-                  "text": "VMU (Visual Memory Unit)",
-                  "comment": "Экран работает, батарейка требует замены.",
-                  "tags": [{ "text": "Батарейка", "tone": "warn" }]
-                },
-                { "text": "Dreamcast Controller" },
-                { "text": "Dreamcast Keyboard" },
-                { "text": "Dreamcast Mouse" }
-              ]
-            }
-          ]
-        }
-      }
+      "items": [
+        "avfc",
+        "sms",
+        "pce",
+        "sfc",
+        "gen",
+        "n64",
+        "ps1",
+        "sat",
+        "gc",
+        "ps2",
+        "dc",
+        "wii",
+        "x360",
+        "ps3",
+        "wiiu",
+        "ps4",
+        "sw",
+        "xsx",
+        "ps5",
+        "sw2"
+      ]
     }
   ]
 }

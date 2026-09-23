@@ -113,8 +113,8 @@ main {
 }
 
 .icon img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   display: block;
   image-rendering: pixelated;
@@ -369,6 +369,53 @@ main {
   line-height: 1.4;
 }
 
+/* ---------- Мини-карта стеллажа ---------- */
+
+.shelf-map {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 12px;
+  max-width: 260px;
+}
+
+.shelf-cell {
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.shelf-cell.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 0 2px rgba(108, 140, 255, 0.35);
+}
+
+.shelf-block {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.shelf-block-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
 /* ---------- Кнопка "наверх" ---------- */
 
 .to-top {
@@ -404,7 +451,7 @@ main {
 
 .to-top:active { transform: scale(0.9); background: var(--card-hover); }
 
-/* ---------- Not found ---------- */
+/* ---------- Not found / Loading ---------- */
 
 .not-found {
   text-align: center;
@@ -412,8 +459,6 @@ main {
   color: var(--text-dim);
 }
 .not-found .big { font-size: 48px; margin-bottom: 16px; }
-
-/* ---------- Loading ---------- */
 
 .loading {
   text-align: center;

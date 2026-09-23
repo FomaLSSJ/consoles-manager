@@ -6,8 +6,9 @@ const DATA_URL = 'data/consoles.json';
 /* ============================================================
    Состояние
    ============================================================ */
-let SECTIONS = [];       // массив секций верхнего уровня
-let ITEM_INDEX = {};     // плоский индекс: id -> item (для роутинга)
+let ENTITIES = {};     // id -> entity
+let SECTIONS = [];     // секции верхнего уровня
+let ITEM_INDEX = {};   // тот же ENTITIES, для роутинга
 
 /* ============================================================
    DOM
@@ -22,7 +23,7 @@ const toTopBtn = document.getElementById('toTopBtn');
    ============================================================ */
 
 function esc(s) {
-  return String(s)
+  return String(s ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -70,26 +71,12 @@ async function loadData() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
 
-    // Поддержка двух форматов:
-    //   { sections: [...] }    — новая структура
-    //   { "nes": {...}, ... }  — старая плоская структура (fallback)
-    if (Array.isArray(json.sections)) {
-      SECTIONS = json.sections;
-    } else {
-      SECTIONS = [{ title: 'Консоли', items: json }];
-    }
+    ENTITIES = json.entities || {};
+    SECTIONS = Array.isArray(json.sections) ? json.sections : [];
+    ITEM_INDEX = ENTITIES;
 
-    // Строим плоский индекс id -> item
-    ITEM_INDEX = {};
-    SECTIONS.forEach(sec => {
-      const items = sec.items || {};
-      Object.entries(items).forEach(([id, item]) => {
-        ITEM_INDEX[id] = item;
-      });
-    });
-
-    console.log('Загружено секций:', SECTIONS.length,
-                'пунктов:', Object.keys(ITEM_INDEX).length);
+    console.log('Загружено сущностей:', Object.keys(ENTITIES).length,
+                'секций верхнего уровня:', SECTIONS.length);
   } catch (err) {
     console.error('Не удалось загрузить данные:', err);
     app.innerHTML = `<div class="loading">Не удалось загрузить данные.<br>${esc(err.message)}</div>`;
@@ -105,7 +92,7 @@ function render() {
 
   if (id && ITEM_INDEX[id]) {
     renderDetail(ITEM_INDEX[id]);
-    headerTitle.textContent = ITEM_INDEX[id].title || 'Без названия';
+    headerTitle.textContent = ITEM_INDEX[id].title || ITEM_INDEX[id].text || 'Без названия';
     backBtn.classList.add('visible');
   } else if (id) {
     renderNotFound(id);
@@ -121,37 +108,37 @@ function render() {
 }
 
 /* ============================================================
-   Главная — секции с пунктами
+   Главная
    ============================================================ */
 
 function renderHome() {
   const wrap = document.createElement('div');
   wrap.className = 'view';
-
   let delay = 0;
 
   SECTIONS.forEach(sec => {
     const sectionEl = document.createElement('section');
     sectionEl.className = 'section';
 
-    // Заголовок секции
     const sHeader = document.createElement('div');
     sHeader.className = 'section-header';
     sHeader.style.animationDelay = `${delay}ms`;
     delay += 40;
 
-    const count = Object.keys(sec.items || {}).length;
+    const ids = sec.items || [];
     sHeader.innerHTML = `
       <div class="section-title">${esc(sec.title || '')}</div>
-      <div class="section-count">${count}</div>
+      <div class="section-count">${ids.length}</div>
     `;
     sectionEl.appendChild(sHeader);
 
-    // Список пунктов
     const list = document.createElement('div');
     list.className = 'list';
 
-    Object.entries(sec.items || {}).forEach(([id, item]) => {
+    ids.forEach(id => {
+      const item = ENTITIES[id];
+      if (!item) return;
+
       const el = document.createElement('a');
       el.className = 'item';
       el.href = `#/${id}`;
@@ -198,13 +185,13 @@ function renderDetail(item) {
 
   const hBody = document.createElement('div');
   hBody.innerHTML = `
-    <div class="detail-title">${esc(item.title || 'Без названия')}</div>
-    <div class="detail-desc">${esc(item.desc || '')}</div>
+    <div class="detail-title">${esc(item.title || item.text || 'Без названия')}</div>
+    ${item.desc ? `<div class="detail-desc">${esc(item.desc)}</div>` : ''}
   `;
   header.appendChild(hBody);
   wrap.appendChild(header);
 
-  // Секции внутри
+  // Секции внутри сущности
   let delay = 0;
   (item.sections || []).forEach(section => {
     const sectionEl = document.createElement('section');
@@ -214,16 +201,21 @@ function renderDetail(item) {
     sHeader.className = 'section-header';
     sHeader.style.animationDelay = `${delay}ms`;
     delay += 40;
+
+    const ids = section.items || [];
     sHeader.innerHTML = `
       <div class="section-title">${esc(section.title || '')}</div>
-      <div class="section-count">${(section.items || []).length}</div>
+      <div class="section-count">${ids.length}</div>
     `;
     sectionEl.appendChild(sHeader);
 
     const list = document.createElement('div');
     list.className = 'detail-list';
 
-    (section.items || []).forEach(entry => {
+    ids.forEach(id => {
+      const entry = ENTITIES[id];
+      if (!entry) return;
+
       const el = document.createElement('div');
       el.className = 'detail-item';
       el.style.animationDelay = `${delay}ms`;
@@ -246,15 +238,16 @@ function renderDetail(item) {
       // Заголовок
       const title = document.createElement('div');
       title.className = 'detail-item-title';
+      const label = entry.text || entry.title || '';
       if (entry.url) {
         const a = document.createElement('a');
         a.href = entry.url;
         a.target = '_blank';
         a.rel = 'noopener';
-        a.textContent = entry.text || '';
+        a.textContent = label;
         title.appendChild(a);
       } else {
-        title.textContent = entry.text || '';
+        title.textContent = label;
       }
       bodyWrap.appendChild(title);
 
@@ -305,6 +298,22 @@ function renderDetail(item) {
         bodyWrap.appendChild(linksWrap);
       }
 
+      // Если у сущности есть вложенные sections — ссылка на отдельный экран
+      if (entry.sections && entry.sections.length) {
+        const a = document.createElement('a');
+        a.className = 'link-card';
+        a.href = `#/${id}`;
+        a.style.marginTop = '10px';
+        a.innerHTML = `
+          <div class="link-icon">›</div>
+          <div class="link-body">
+            <div class="link-text">Открыть: ${esc(entry.title || entry.text || '')}</div>
+            <div class="link-comment">Содержит ${entry.sections.length} секц.</div>
+          </div>
+        `;
+        bodyWrap.appendChild(a);
+      }
+
       el.appendChild(bodyWrap);
       list.appendChild(el);
     });
@@ -312,6 +321,23 @@ function renderDetail(item) {
     sectionEl.appendChild(list);
     wrap.appendChild(sectionEl);
   });
+
+// Карта стеллажа (только для боксов с валидным shelf)
+  if (item.type === 'box' && item.shelf >= 1 && item.shelf <= 24) {
+    const shelfBlock = document.createElement('div');
+    shelfBlock.className = 'shelf-block';
+    shelfBlock.innerHTML = `
+      <div class="shelf-block-title">Стеллаж — ячейка ${item.shelf}</div>
+      <div class="shelf-map">
+        ${Array.from({ length: 24 }, (_, i) => {
+          const n = i + 1;
+          const cls = n === item.shelf ? 'shelf-cell active' : 'shelf-cell';
+          return `<div class="${cls}">${n}</div>`;
+        }).join('')}
+      </div>
+    `;
+    wrap.appendChild(shelfBlock);
+  }
 
   app.replaceChildren(wrap);
 }
