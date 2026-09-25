@@ -378,6 +378,8 @@ function buildItemRow(parent, idx, itemId) {
 
 /* ============================================================
    Combobox выбора сущности
+   - фокус: показать полный список
+   - ввод: фильтр с 2-го символа
    ============================================================ */
 
 function buildEntityCombo(currentId, onChange) {
@@ -385,11 +387,10 @@ function buildEntityCombo(currentId, onChange) {
 
   const input = el('input', 'combo-input');
   input.type = 'text';
-  input.placeholder = currentId ? '' : 'Нажмите, чтобы выбрать сущность…';
+  input.placeholder = 'Начните печатать id или название…';
   input.value = currentId || '';
   input.autocomplete = 'off';
   input.spellcheck = false;
-  input.readOnly = true;
 
   const clearBtn = el('button', 'combo-clear');
   clearBtn.type = 'button';
@@ -412,12 +413,15 @@ function buildEntityCombo(currentId, onChange) {
   }
 
   function renderOptions(query) {
-    const q = (query || '').trim().toLowerCase();
     dropdown.innerHTML = '';
+    const q = (query || '').trim().toLowerCase();
+
+    // Полный список, пока не введено минимум 2 символа
+    const useFilter = q.length >= 2;
 
     const entries = Object.entries(DATA.entities)
       .filter(([id, ent]) => {
-        if (!q) return true;
+        if (!useFilter) return true;
         const title = (ent.title || ent.text || '').toLowerCase();
         return id.toLowerCase().includes(q) || title.includes(q);
       })
@@ -453,6 +457,8 @@ function buildEntityCombo(currentId, onChange) {
 
       dropdown.appendChild(opt);
     });
+
+    if (highlightedIdx >= entries.length) highlightedIdx = entries.length ? 0 : -1;
   }
 
   function select(id) {
@@ -460,13 +466,12 @@ function buildEntityCombo(currentId, onChange) {
     wrap.classList.toggle('has-value', !!id);
     close();
     onChange(id);
+    input.blur();
   }
 
   function open() {
     if (isOpen) return;
     isOpen = true;
-    highlightedIdx = 0;
-    renderOptions('');
     positionDropdown();
     dropdown.classList.add('open');
   }
@@ -488,16 +493,32 @@ function buildEntityCombo(currentId, onChange) {
     }
   }
 
-  input.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    if (isOpen) close();
-    else open();
+  // Фокус — выделяем и показываем полный список
+  input.addEventListener('focus', () => {
+    input.select();
+    highlightedIdx = 0;
+    renderOptions('');
+    open();
+  });
+
+  // Ввод — фильтр включается с 2-го символа
+  input.addEventListener('input', () => {
+    const v = input.value;
+    wrap.classList.toggle('has-value', !!v.trim());
+
+    highlightedIdx = 0;
+    renderOptions(v);
+    if (!isOpen) open();
   });
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      if (!isOpen) { open(); return; }
+      if (!isOpen) {
+        renderOptions(input.value);
+        open();
+        return;
+      }
       highlightedIdx = Math.min(highlightedIdx + 1, dropdown.children.length - 1);
       updateHighlight();
     } else if (e.key === 'ArrowUp') {
@@ -508,10 +529,26 @@ function buildEntityCombo(currentId, onChange) {
     } else if (e.key === 'Enter') {
       e.preventDefault();
       const opt = dropdown.children[highlightedIdx];
-      if (opt && opt.dataset.id) select(opt.dataset.id);
+      if (opt && opt.dataset.id) {
+        select(opt.dataset.id);
+      } else {
+        onChange(input.value.trim());
+        close();
+        input.blur();
+      }
     } else if (e.key === 'Escape') {
       close();
+      input.blur();
     }
+  });
+
+  // Blur — фиксируем значение
+  input.addEventListener('blur', () => {
+    setTimeout(() => {
+      if (!isOpen) return;
+      onChange(input.value.trim());
+      close();
+    }, 150);
   });
 
   clearBtn.addEventListener('mousedown', (e) => {
@@ -521,6 +558,7 @@ function buildEntityCombo(currentId, onChange) {
     wrap.classList.remove('has-value');
     onChange('');
     close();
+    input.focus();
   });
 
   document.addEventListener('mousedown', (e) => {
@@ -758,7 +796,6 @@ function renderEntityEditor(id) {
 
   contentEl.appendChild(wrap);
 
-  // Инициализация карты стеллажа при открытии
   refreshShelfVisibility();
 }
 

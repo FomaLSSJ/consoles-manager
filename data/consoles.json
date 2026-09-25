@@ -1,54 +1,5 @@
 {
   "entities": {
-    "box-1": {
-      "type": "box",
-      "icon": "assets/box1.png",
-      "emoji": "📦",
-      "title": "Бокс №1 — NES/Famicom",
-      "desc": "11-я секция в стелаже",
-      "sections": [
-        {
-          "title": "Сontents",
-          "items": [
-            "console-av-famicom",
-            "fc-dogbone-gamepad",
-            "psu-impulse-9v1a",
-            "scart-rgb-multiout-csync"
-          ]
-        },
-        {
-          "title": "Notes",
-          "items": [
-            "note-boxes-vertical",
-            "note-zapper-battery"
-          ]
-        }
-      ],
-      "tags": [],
-      "links": [],
-      "shelf": 11
-    },
-    "box-2": {
-      "type": "box",
-      "icon": "assets/box2.png",
-      "emoji": "📦",
-      "title": "Бокс №2 — PlayStation",
-      "desc": "10-я секция в стелаже",
-      "sections": [
-        {
-          "title": "Сontents",
-          "items": [
-            "console-playstation",
-            "dualshock",
-            "memory-card",
-            "discs-15"
-          ]
-        }
-      ],
-      "tags": [],
-      "links": [],
-      "shelf": 10
-    },
     "note-boxes-vertical": {
       "type": "etc",
       "text": "Коробки хранить вертикально",
@@ -68,13 +19,6 @@
       "links": [],
       "sections": []
     },
-    "discs-15": {
-      "type": "etc",
-      "text": "15 дисков в джевелах",
-      "tags": [],
-      "links": [],
-      "sections": []
-    },
     "super-gameboy": {
       "type": "accessory",
       "text": "Super Game Boy",
@@ -86,7 +30,8 @@
       ],
       "links": [],
       "sections": [],
-      "icon": "assets/nintendo/sfc-cartridge.png"
+      "icon": "assets/nintendo/sfc-cartridge.png",
+      "emoji": "📦"
     },
     "dualshock": {
       "type": "gamepad",
@@ -141,57 +86,6 @@
       "links": [],
       "sections": []
     },
-    "everdrive-n8-pro": {
-      "type": "cartridge",
-      "text": "Krikzz Everdrive N8 Pro",
-      "icon": "assets/nintendo/everdriven8pro.png",
-      "comment": "Флеш-картридж в форм-факторе Fami",
-      "tags": [
-        {
-          "text": "all-in-one",
-          "tone": "good"
-        },
-        {
-          "text": "229-mappers",
-          "tone": "good"
-        },
-        {
-          "text": "save-states",
-          "tone": "good"
-        }
-      ],
-      "links": [
-        {
-          "text": "Сайт Everdrive N8 Pro",
-          "url": "https://krikzz.com/our-products/cartridges/n8-pro-fami.html",
-          "comment": "Информация о флеш-картридже"
-        },
-        {
-          "text": "Файлы N8 Pro-series",
-          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/",
-          "comment": "Все файлы для N8 Pro-series"
-        },
-        {
-          "text": "Инструкция Everdrive N8 Pro",
-          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/n8-pro-manual.pdf",
-          "comment": "PDF, обновление через SD-карту"
-        }
-      ],
-      "sections": []
-    },
-    "scart-rgb-multiout-csync": {
-      "type": "cable",
-      "text": "Кабель Nintendo Multiout Scart RGB CSync",
-      "tags": [
-        {
-          "text": "convert-composite-csync",
-          "tone": "good"
-        }
-      ],
-      "links": [],
-      "sections": [],
-      "icon": "assets/nintendo/multiout-cable/png"
-    },
     "zapper-gray": {
       "type": "accessory",
       "text": "Famicom Zapper (Gray)",
@@ -211,7 +105,8 @@
         }
       ],
       "links": [],
-      "sections": []
+      "sections": [],
+      "emoji": "📦"
     },
     "console-av-famicom": {
       "type": "console",
@@ -231,12 +126,13 @@
       "sections": [],
       "url": "https://ir.ozone.ru/s3/multimedia-1-7/c400/9661134715.jpg",
       "cover": true,
-      "emoji": ""
+      "emoji": "",
+      "comment": "HVC-101 NTSC-J"
     },
     "ps1": {
       "type": "etc",
       "icon": "assets/ps1.png",
-      "emoji": "🎯",
+      "emoji": "🎮",
       "title": "Sony PlayStation",
       "desc": "32-bit, 5-gen, Japan, 1994",
       "sections": [
@@ -245,13 +141,18 @@
           "items": [
             "console-playstation",
             "dualshock",
-            "memory-card",
-            "guncon-lightgun"
+            "memory-card"
           ]
         },
         {
-          "title": "Games",
-          "items": []
+          "title": "Accessories",
+          "items": [
+            "power-unit-12v3a",
+            "guncon-lightgun",
+            "brook-wingman-ps",
+            "8bitmods-memcard-pro",
+            "bitfunx-psxmemcard-gen2"
+          ]
         }
       ],
       "tags": [],
@@ -260,7 +161,7 @@
     "avfc": {
       "type": "etc",
       "icon": "assets/avfc.png",
-      "emoji": "🎮",
+      "emoji": "🕹️",
       "title": "Nintendo AV Famicom",
       "desc": "8-bit, 3-gen, Japan, 1993",
       "sections": [
@@ -274,13 +175,15 @@
         {
           "title": "Accessories",
           "items": [
-            "psu-impulse-9v1a",
-            "everdrive-n8-pro",
-            "8bitdo-n30-gamepad",
+            "power-unit-9v2a",
+            "cable-scart-rgb-multiout-csync",
+            "famicom-keyboard",
+            "krikzz-everdrive-n8-pro",
             "zapper-gray",
             "nes-four-score",
             "nes-advantage-arcade-pad",
-            "famicom-keyboard"
+            "8bitdo-n30-gamepad",
+            "brook-wingman-snes"
           ]
         },
         {
@@ -303,13 +206,17 @@
         {
           "title": "Hardware",
           "items": [
-            "console-super-famicom",
-            "super-gameboy"
+            "console-super-famicom"
           ]
         },
         {
-          "title": "Games",
-          "items": []
+          "title": "Accessories",
+          "items": [
+            "power-unit-9v2a",
+            "cable-scart-rgb-multiout-csync",
+            "super-gameboy",
+            "brook-wingman-snes"
+          ]
         }
       ],
       "tags": [],
@@ -318,20 +225,25 @@
     "gen": {
       "type": "etc",
       "icon": "assets/sega-md.png",
-      "emoji": "💠",
+      "emoji": "🕹️",
       "title": "Sega Genesis",
       "desc": "16-bit, 4-gen, USA, 1988",
       "sections": [
         {
           "title": "Hardware",
           "items": [
-            "console-genesis",
-            "8bitdo-m30-gamepad"
+            "console-genesis"
           ]
         },
         {
-          "title": "Games",
-          "items": []
+          "title": "Accessories",
+          "items": [
+            "power-unit-9v2a",
+            "cable-scart-rgb-din8-stereo",
+            "krikzz-mega-everdrive-pro",
+            "8bitdo-m30-gamepad",
+            "brook-wingman-md"
+          ]
         }
       ],
       "tags": [],
@@ -353,8 +265,11 @@
           ]
         },
         {
-          "title": "Games",
-          "items": []
+          "title": "Accessories",
+          "items": [
+            "power-unit-12v3a",
+            "brook-wingman-sd"
+          ]
         }
       ],
       "tags": [],
@@ -363,7 +278,7 @@
     },
     "console-playstation": {
       "type": "console",
-      "text": "PlayStation SCPH-5502",
+      "text": "Sony PlayStation",
       "tags": [
         {
           "text": "xstation-mod",
@@ -376,16 +291,21 @@
       ],
       "links": [],
       "sections": [],
-      "title": "Sony PlayStation",
+      "title": "",
       "emoji": "🎮",
-      "icon": "assets/sony/playstation.png"
+      "icon": "assets/sony/playstation.png",
+      "comment": "SCPH-5500 NTSC-J"
     },
     "console-genesis": {
       "title": "",
-      "desc": "America, Model 1601",
+      "desc": "",
       "tags": [
         {
           "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-built-in",
           "tone": "good"
         },
         {
@@ -399,7 +319,8 @@
       "text": "Sega Genesis",
       "emoji": "🎮",
       "icon": "assets/sega/genesis.png",
-      "cover": true
+      "cover": true,
+      "comment": "NTSC Model 1601"
     },
     "console-super-famicom": {
       "title": "",
@@ -420,7 +341,8 @@
       "text": "Nintendo Super Famicom",
       "emoji": "🎮",
       "icon": "assets/nintendo/super-famicom.png",
-      "cover": true
+      "cover": true,
+      "comment": "NTSC-J"
     },
     "console-sega-dreamcast": {
       "title": "",
@@ -448,7 +370,8 @@
       "type": "console",
       "text": "Sega Dreamcast",
       "emoji": "🎮",
-      "icon": "assets/sega/dreamcast.png"
+      "icon": "assets/sega/dreamcast.png",
+      "comment": "NTSC-J"
     },
     "fc-dogbone-gamepad": {
       "type": "gamepad",
@@ -487,7 +410,15 @@
         }
       ],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "sms",
+            "gen"
+          ]
+        }
+      ],
       "icon": "assets/sega/8bitdo-m30.png",
       "emoji": "📦"
     },
@@ -566,13 +497,14 @@
         }
       ],
       "links": [],
-      "sections": []
+      "sections": [],
+      "emoji": "📦"
     },
     "fc-db-snn-cartridge": {
       "type": "game",
       "text": "Dragon Ball: Shenron no Nazo",
       "icon": "assets/nintendo/fc-cartridge.png",
-      "comment": "",
+      "comment": "Japan, November 27, 1986",
       "tags": [
         {
           "text": "original",
@@ -589,7 +521,7 @@
       ],
       "links": [],
       "sections": [],
-      "desc": "Japan, November 27, 1986",
+      "desc": "Shenron no Nazo consists of 2D overhead areas where Goku must fight many enemies, and switches to side-scrolling sequences for the boss fights.",
       "url": "https://dragonball.fandom.com/wiki/Dragon_Ball:_Shenron_no_Nazo"
     },
     "sms": {
@@ -601,13 +533,22 @@
         {
           "title": "Hardware",
           "items": [
-            "console-master-system",
-            "master-everdrive-x7"
+            "console-master-system"
+          ]
+        },
+        {
+          "title": "Accessories",
+          "items": [
+            "power-unit-9v2a",
+            "cable-scart-rgb-din8-stereo",
+            "krikzz-master-everdrive-x7",
+            "8bitdo-m30-gamepad",
+            "sms-control-pad-joystick"
           ]
         }
       ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🕹️",
       "icon": "assets/sega/master-system.png",
       "cover": false
     },
@@ -629,47 +570,25 @@
       "type": "console",
       "text": "Sega Master System",
       "icon": "assets/sega/master-system.png",
-      "emoji": "📦"
-    },
-    "master-everdrive-x7": {
-      "title": "",
-      "desc": "",
-      "tags": [
-        {
-          "text": "all-in-one",
-          "tone": "good"
-        },
-        {
-          "text": "save-states",
-          "tone": "good"
-        }
-      ],
-      "links": [
-        {
-          "text": "Сайт Master Everdrive X7",
-          "url": "https://krikzz.com/our-products/cartridges/smsx7.html",
-          "comment": "Страница с описанием"
-        },
-        {
-          "text": "Прошивка Master Everdrive X7",
-          "url": "https://krikzz.com/pub/support/master-everdrive/x-series/OS/",
-          "comment": "Страница со списком прошивок"
-        }
-      ],
-      "sections": [],
-      "icon": "assets/sega/sms-cartridge.png",
       "emoji": "📦",
-      "type": "cartridge",
-      "text": "Master Everdrive X7"
+      "comment": "NTSC"
     },
     "sat": {
       "title": "Sega Saturn",
       "desc": "32-bit, 5-gen, Japan, 1994",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Accessories",
+          "items": [
+            "power-unit-12v3a",
+            "brook-wingman-sd"
+          ]
+        }
+      ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/sega/saturn.png",
       "text": ""
     },
@@ -678,9 +597,25 @@
       "desc": "64-bit, 5-gen, Japan, 1996",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-n64"
+          ]
+        },
+        {
+          "title": "Accessories",
+          "items": [
+            "cable-scart-rgb-multiout-csync",
+            "n64-expansion-pak",
+            "n64-psu-type-c",
+            "polymega-rc05-ultra"
+          ]
+        }
+      ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🕹️",
       "text": "",
       "icon": "assets/nintendo/n64.png"
     },
@@ -689,9 +624,19 @@
       "desc": "32-bit, 6-gen, Europe, 2002",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Accessories",
+          "items": [
+            "power-unit-12v3a",
+            "cable-scart-rgb-multiout-csync",
+            "8bitmods-memcard-pro-gc",
+            "bitfunx-gcmce"
+          ]
+        }
+      ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/nintendo/gc.png",
       "text": ""
     },
@@ -700,9 +645,18 @@
       "desc": "32/64-bit, 6-gen, Europe, 2013",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Accessories",
+          "items": [
+            "brook-wingman-ps",
+            "8bitmods-memcard-pro",
+            "bitfunx-psxmemcard-gen2"
+          ]
+        }
+      ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/sony/ps2.png",
       "cover": true,
       "text": ""
@@ -716,18 +670,26 @@
         {
           "title": "Consoles",
           "items": [
-            "console-pc-engine"
+            "console-pc-engine",
+            "console-pc-engine-duo",
+            "pce-interface-unit",
+            "pce-cd-rom-unit"
           ]
         },
         {
           "title": "Accessories",
           "items": [
-            "turbo-everdrive-pro"
+            "power-unit-9v2a",
+            "krikzz-turbo-everdrive-pro",
+            "pce-usb2pce-controller-adapter",
+            "brook-wingman-md",
+            "8bitdo-pce-gamepad",
+            "polymega-rc04-turbo"
           ]
         }
       ],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🕹️",
       "icon": "assets/nec/pce.png",
       "cover": false
     },
@@ -738,7 +700,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "asswts/nintendo/wii.png"
     },
     "ps3": {
@@ -748,7 +710,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/sony/ps3.png"
     },
     "x360": {
@@ -758,7 +720,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/microsoft/x360.png"
     },
     "wiiu": {
@@ -768,7 +730,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/nintendo/wiiu.png"
     },
     "ps4": {
@@ -778,7 +740,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/sony/ps4.png"
     },
     "sw": {
@@ -788,7 +750,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/nintendo/sw.png",
       "cover": true
     },
@@ -799,8 +761,9 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
-      "icon": "assets/microsoft/xsx.png"
+      "emoji": "🎮",
+      "icon": "assets/microsoft/xsx.png",
+      "cover": true
     },
     "ps5": {
       "title": "Sony PlayStation 5",
@@ -809,7 +772,7 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/sony/ps5.png"
     },
     "sw2": {
@@ -819,78 +782,8 @@
       "links": [],
       "sections": [],
       "type": "etc",
-      "emoji": "📦",
+      "emoji": "🎮",
       "icon": "assets/nintendo/sw2.png"
-    },
-    "psu-impulse-9v1a": {
-      "type": "accessory",
-      "text": "Блок питания - 9 вольт 1 ампер",
-      "tags": [
-        {
-          "text": "euro-plug",
-          "tone": "good"
-        },
-        {
-          "text": "110-220v",
-          "tone": "good"
-        }
-      ],
-      "links": [],
-      "sections": [
-        {
-          "title": "Consoles Support",
-          "items": [
-            "avfc",
-            "sfc",
-            "sms",
-            "gen",
-            "pce"
-          ]
-        }
-      ],
-      "desc": "Подходит для Nintendo Famicom, Super Famicom, Sega Master System, Genesis, NEC PC-Engine",
-      "emoji": "🔌",
-      "icon": "assets/accessory/psu-plug.png"
-    },
-    "turbo-everdrive-pro": {
-      "title": "Krikzz Turbo Everdrive Pro",
-      "desc": "",
-      "tags": [
-        {
-          "text": "all-in-one",
-          "tone": "good"
-        },
-        {
-          "text": "save-states",
-          "tone": "good"
-        },
-        {
-          "text": "cd-rom-core",
-          "tone": "good"
-        }
-      ],
-      "links": [
-        {
-          "text": "Сайт Turbo Everdrive Pro",
-          "url": "https://krikzz.com/our-products/cartridges/turbo-everdrive-pro.html",
-          "comment": "Страница с описанием"
-        },
-        {
-          "text": "Файлы Turbo Pro-series",
-          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/",
-          "comment": "Все файлы для Turbo Pro-series"
-        },
-        {
-          "text": "Инструкция Turbo Everdrive Pro",
-          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/turbo-ed-pro-manual.pdf",
-          "comment": "PDF, обновление через SD-карту"
-        }
-      ],
-      "sections": [],
-      "type": "cartridge",
-      "emoji": "📦",
-      "icon": "assets/nec/hucard.png",
-      "cover": true
     },
     "console-pc-engine": {
       "title": "NEC PC-Engine",
@@ -909,7 +802,8 @@
       "sections": [],
       "type": "console",
       "emoji": "📦",
-      "icon": "assets/nec/pce.png"
+      "icon": "assets/nec/pce.png",
+      "comment": "NTSC-J"
     },
     "famicom-disk-system": {
       "title": "Nintendo Famicom Disk System",
@@ -963,14 +857,943 @@
       "type": "accessory",
       "emoji": "📦",
       "icon": "assets/nintendo/keyboard.png"
+    },
+    "power-unit-9v2a": {
+      "type": "accessory",
+      "text": "Power Unit - 9v 2a",
+      "tags": [
+        {
+          "text": "eu-plug",
+          "tone": "good"
+        },
+        {
+          "text": "110-220v",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "avfc",
+            "sfc",
+            "sms",
+            "gen",
+            "pce"
+          ]
+        }
+      ],
+      "desc": "Подходит для Nintendo Famicom, Super Famicom, Sega Master System, Genesis, NEC PC-Engine\nПолярность - плюс снаружи, минус внутри (⊕—(o—⊖)",
+      "emoji": "🔌",
+      "icon": "assets/accessory/power-unit.png"
+    },
+    "power-unit-12v3a": {
+      "title": "Power Unit - 12v3a",
+      "desc": "Подходит для Nintendo Game Cube, Sega Saturn, Dreamcast, Sony PlayStation 1",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "gc",
+            "sat",
+            "dc",
+            "ps1"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "🔌",
+      "icon": "assets/accessory/power-unit.png"
+    },
+    "krikzz-everdrive-n8-pro": {
+      "type": "cartridge",
+      "text": "Krikzz Everdrive N8 Pro",
+      "icon": "assets/nintendo/everdriven8pro.png",
+      "comment": "Флеш-картридж в форм-факторе Fami",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "229-mappers",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Everdrive N8 Pro",
+          "url": "https://krikzz.com/our-products/cartridges/n8-pro-fami.html",
+          "comment": "Информация о флеш-картридже"
+        },
+        {
+          "text": "Файлы N8 Pro-series",
+          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/",
+          "comment": "Все файлы для N8 Pro-series"
+        },
+        {
+          "text": "Инструкция Everdrive N8 Pro",
+          "url": "https://krikzz.com/pub/support/everdrive-n8/pro-series/n8-pro-manual.pdf",
+          "comment": "PDF, обновление через SD-карту"
+        }
+      ],
+      "sections": []
+    },
+    "krikzz-master-everdrive-x7": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Master Everdrive X7",
+          "url": "https://krikzz.com/our-products/cartridges/smsx7.html",
+          "comment": "Страница с описанием"
+        },
+        {
+          "text": "Прошивка Master Everdrive X7",
+          "url": "https://krikzz.com/pub/support/master-everdrive/x-series/OS/",
+          "comment": "Страница со списком прошивок"
+        }
+      ],
+      "sections": [],
+      "icon": "assets/sega/sms-cartridge.png",
+      "emoji": "📦",
+      "type": "cartridge",
+      "text": "Master Everdrive X7"
+    },
+    "krikzz-turbo-everdrive-pro": {
+      "title": "Krikzz Turbo Everdrive Pro",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        },
+        {
+          "text": "cd-rom-core",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Turbo Everdrive Pro",
+          "url": "https://krikzz.com/our-products/cartridges/turbo-everdrive-pro.html",
+          "comment": "Страница с описанием"
+        },
+        {
+          "text": "Файлы Turbo Pro-series",
+          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/",
+          "comment": "Все файлы для Turbo Pro-series"
+        },
+        {
+          "text": "Инструкция Turbo Everdrive Pro",
+          "url": "https://krikzz.com/pub/support/turbo-everdrive/pro-series/turbo-ed-pro-manual.pdf",
+          "comment": "PDF, обновление через SD-карту"
+        }
+      ],
+      "sections": [],
+      "type": "cartridge",
+      "emoji": "📦",
+      "icon": "assets/nec/hucard.png",
+      "cover": true
+    },
+    "brook-wingman-snes": {
+      "title": "Brook Wingman FC/SNES",
+      "desc": "Подходит для Nintendo Famicom, Super Famicom",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "support-nes",
+          "tone": "good"
+        },
+        {
+          "text": "support-snes",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "avfc",
+            "sfc"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/brook/wingman.png"
+    },
+    "brook-wingman-md": {
+      "title": "Brook Wingman MD/GEN/PCE",
+      "desc": "Подходит для Sega Genesis (Mega Drive), NEC PC-engine",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "support-gen",
+          "tone": "good"
+        },
+        {
+          "text": "support-pce",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "gen",
+            "pce"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/brook/wingman.png"
+    },
+    "brook-wingman-ps": {
+      "title": "Broom Wingman PS/PS2",
+      "desc": "Подходит для Sony PlayStation 1, PlayStation 2",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "support-ps1",
+          "tone": "good"
+        },
+        {
+          "text": "support-ps2",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "ps1",
+            "ps2"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/brook/wingman.png"
+    },
+    "brook-wingman-sd": {
+      "title": "Brook Wingman SD",
+      "desc": "Подходит для Sega Saturn, Dreemcast\n200 blocks memory, support vibration",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "support-sat",
+          "tone": "good"
+        },
+        {
+          "text": "support-dc",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "sat",
+            "dc"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/brook/wingman.png"
+    },
+    "console-n64": {
+      "title": "Nintendo 64",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "emoji": "📦",
+      "icon": "assets/nec/n64.png",
+      "comment": "NTSC-J"
+    },
+    "n64-expansion-pak": {
+      "title": "Nintendo 64 Expansion Pak",
+      "desc": "Memory 4MB",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "4mb-memory",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "n64"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nintendo/expansionpak.png"
+    },
+    "n64-psu-type-c": {
+      "title": "Nintendo 64 - PSU Type-C",
+      "desc": "",
+      "tags": [
+        {
+          "text": "type-c",
+          "tone": "good"
+        },
+        {
+          "text": "modern-psu",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "n64"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nintendo/psu.png"
+    },
+    "pce-usb2pce-controller-adapter": {
+      "title": "Новая сущность",
+      "desc": "",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "support-usb-hub",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Инструкция USB-2-PCE",
+          "url": "https://controlleradapter.com/pages/usb2pce-instruction-manual",
+          "comment": "Инструкция с полным описанием адаптера"
+        },
+        {
+          "text": "Прошивка Joypad-OS",
+          "url": "https://github.com/joypad-ai/joypad-os/releases",
+          "comment": "Репозиторий всех прошивок для Joypad-OS"
+        }
+      ],
+      "sections": [],
+      "text": "USB-2-PCE Controller Adapter",
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/pce/adapter.png"
+    },
+    "console-pc-engine-duo": {
+      "title": "NEC PC-Engine DUO",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-mod",
+          "tone": "good"
+        },
+        {
+          "text": "cd-rom-built-in",
+          "tone": "good"
+        },
+        {
+          "text": "psu-other-polarity",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "emoji": "📦",
+      "icon": "assets/nec/pce.png",
+      "comment": "NTSC-J"
+    },
+    "pce-cd-rom-unit": {
+      "title": "NEC PC-Engine CD-ROM Unit",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "working",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nec/cdromunit.png"
+    },
+    "pce-interface-unit": {
+      "title": "NEC PC-Engine Interface Unit",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "working",
+          "tone": "good"
+        },
+        {
+          "text": "rgb-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "accessory",
+      "emoji": "📦",
+      "icon": "assets/nec/interfaceunit.png"
+    },
+    "8bitdo-pce-gamepad": {
+      "title": "8BitDo PCE 2.4Ghz",
+      "desc": "",
+      "tags": [
+        {
+          "text": "wireless",
+          "tone": "good"
+        },
+        {
+          "text": "usb-dongle",
+          "tone": "warn"
+        },
+        {
+          "text": "not-support-pce",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "gamepad",
+      "text": "",
+      "icon": "assets/nintendo/8bitdopce.png",
+      "emoji": "📦"
+    },
+    "polymega-rc04-turbo": {
+      "title": "Polymega RC04 - Turbo Controller",
+      "desc": "",
+      "tags": [
+        {
+          "text": "wired",
+          "tone": "warn"
+        },
+        {
+          "text": "support-pce",
+          "tone": "good"
+        },
+        {
+          "text": "6-buttons",
+          "tone": "good"
+        },
+        {
+          "text": "turbo-mode",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "gamepad",
+      "emoji": "📦",
+      "icon": "assets/polymega/rc04.png",
+      "comment": "Turbo Duo, PC-Engine, SuperGrafx, and other compatible consoles"
+    },
+    "polymega-rc05-ultra": {
+      "title": "Polymega RC05 - Ultra Retro Controller",
+      "desc": "",
+      "tags": [
+        {
+          "text": "wired",
+          "tone": "warn"
+        },
+        {
+          "text": "support-n64",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "gamepad",
+      "comment": "Original N64 Console, Rumble Pak, Memory Pak, Transfer Pak, VRU",
+      "emoji": "📦",
+      "icon": "assets/polymega/rc05.png"
+    },
+    "cable-scart-rgb-multiout-csync": {
+      "type": "cable",
+      "text": "Cable - Nintendo Multiout Scart RGB CSync",
+      "tags": [
+        {
+          "text": "convert-composite-csync",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "avfc",
+            "sfc",
+            "n64",
+            "gc"
+          ]
+        }
+      ],
+      "icon": "assets/nintendo/cable-multiout.png",
+      "desc": "Подходит для Nintendo Famicom, Super Famicom, Nintendo 64, Game Cube",
+      "emoji": "🔗",
+      "comment": ""
+    },
+    "cable-scart-rgb-din8-stereo": {
+      "title": "",
+      "desc": "Подходит для Sega Master System Genesis",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "sms",
+            "gen"
+          ]
+        }
+      ],
+      "type": "cable",
+      "emoji": "🔗",
+      "icon": "assets/nintendo/cable-din8.png",
+      "text": "Cable - Sega DIN8 Scart RGB + Stereo 3.5 Jack",
+      "cover": true
+    },
+    "box-n64": {
+      "title": "Box — Nintendo 64",
+      "desc": "9-я секция в стелаже",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-n64",
+            "n64-psu-type-c",
+            "n64-expansion-pak",
+            "polymega-rc05-ultra"
+          ]
+        }
+      ],
+      "type": "box",
+      "shelf": 9,
+      "icon": "assets/etc/box.png",
+      "emoji": "📦"
+    },
+    "box-fc": {
+      "type": "box",
+      "icon": "assets/etc/box.png",
+      "emoji": "📦",
+      "title": "Box — Famicom",
+      "desc": "12-я секция в стелаже",
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-av-famicom",
+            "power-unit-9v2a",
+            "cable-scart-rgb-multiout-csync",
+            "krikzz-everdrive-n8-pro",
+            "fc-dogbone-gamepad",
+            "8bitdo-n30-gamepad"
+          ]
+        },
+        {
+          "title": "Notes",
+          "items": [
+            "note-boxes-vertical",
+            "note-zapper-battery"
+          ]
+        }
+      ],
+      "tags": [],
+      "links": [],
+      "shelf": 12
+    },
+    "box-ps1": {
+      "type": "box",
+      "icon": "assets/etc/box.png",
+      "emoji": "📦",
+      "title": "Box — PlayStation",
+      "desc": "10-я секция в стелаже",
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-playstation",
+            "dualshock",
+            "memory-card",
+            ""
+          ]
+        }
+      ],
+      "tags": [],
+      "links": [],
+      "shelf": 10
+    },
+    "box-sms": {
+      "title": "Box — Sega Master System",
+      "desc": "13-я секция в стелаже",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-master-system",
+            "sms-control-pad-joystick"
+          ]
+        }
+      ],
+      "type": "box",
+      "shelf": 13,
+      "emoji": "📦",
+      "icon": "assets/etc/box.png"
+    },
+    "sms-control-pad-joystick": {
+      "title": "Sega Master System - Control Pad",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "support-joystick",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "gamepad",
+      "icon": "assets/sega/sms-control-pad.png",
+      "cover": true,
+      "emoji": "📦",
+      "comment": "Code 3020"
+    },
+    "krikzz-mega-everdrive-pro": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "save-states",
+          "tone": "good"
+        },
+        {
+          "text": "mega-cd-core",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Mega Everdrive Pro",
+          "url": "https://krikzz.com/our-products/cartridges/mega-everdrive-pro.html",
+          "comment": "Информация о флеш-картридже"
+        },
+        {
+          "text": "Файлы mega-everdrive pro-series",
+          "url": "https://krikzz.com/pub/support/mega-everdrive/pro-series/",
+          "comment": "Все файлы для mega-everdrive pro-series"
+        },
+        {
+          "text": "Инструкция Mega Everdrive Pro",
+          "url": "https://krikzz.com/pub/support/mega-everdrive/pro-series/mega-ed-pro-manual.pdf",
+          "comment": "PDF, обновление через SD-карту"
+        }
+      ],
+      "sections": [],
+      "type": "cartridge",
+      "emoji": "📦",
+      "text": "Krikzz Mega Everdrive Pro",
+      "icon": "assets/sega/gen-cartridge.png"
+    },
+    "box-gen": {
+      "title": "Box — Sega Genesis",
+      "desc": "16-я секция в стелаже",
+      "tags": [],
+      "links": [],
+      "sections": [
+        {
+          "title": "Сontents",
+          "items": [
+            "console-genesis",
+            "krikzz-mega-everdrive-pro",
+            "8bitdo-m30-gamepad"
+          ]
+        }
+      ],
+      "type": "box",
+      "shelf": 16,
+      "emoji": "📦",
+      "icon": "assets/etc/box.png"
+    },
+    "8bitmods-memcard-pro": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "unlimited-memory",
+          "tone": "good"
+        },
+        {
+          "text": "support-wi-fi",
+          "tone": "good"
+        },
+        {
+          "text": "support-game-id",
+          "tone": "good"
+        },
+        {
+          "text": "oled-display",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Инструкция MemCard PRO",
+          "url": "https://www.8bitmods.wiki/memcard-pro-mcp002",
+          "comment": "Инстркция с документацией по карте памяти"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "ps1",
+            "ps2"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "text": "8BitMods - MemCard PRO",
+      "comment": "Smoke Black",
+      "icon": "assets/8bitmods/memcard-pro.png",
+      "emoji": "📦"
+    },
+    "8bitmods-memcard-pro-gc": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "unlimited-memory",
+          "tone": "good"
+        },
+        {
+          "text": "support-wi-fi",
+          "tone": "good"
+        },
+        {
+          "text": "support-game-id",
+          "tone": "good"
+        },
+        {
+          "text": "oled-display",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Инструкция MemCard PRO GC",
+          "url": "https://www.8bitmods.wiki/memcard-pro-gc",
+          "comment": "Инстркция с документацией по карте памяти"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "gc"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "text": "8BitMods - MemCard PRO GC",
+      "comment": "Smoke Black",
+      "emoji": "📦",
+      "icon": "assets/8bitmods/memcard-pro-gc.png"
+    },
+    "bitfunx-gcmce": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "unlimited-memory",
+          "tone": "good"
+        },
+        {
+          "text": "support-game-id",
+          "tone": "good"
+        },
+        {
+          "text": "oled-display",
+          "tone": "good"
+        },
+        {
+          "text": "open-source",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт FlipperMCE",
+          "url": "https://flippermce.github.io/",
+          "comment": "Официальный сайт карты памяти"
+        },
+        {
+          "text": "Прошивка FlipperMCE",
+          "url": "https://github.com/FlipperMCE/firmware/releases",
+          "comment": "Ссылка на релизы прошивок на GitHub"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "gc"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "text": "Bitfunx - GCMCE FlipperMCE",
+      "emoji": "📦",
+      "icon": "assets/bitfunx/gcmce.png",
+      "comment": "TRN Black - XLL-GCMCE"
+    },
+    "bitfunx-psxmemcard-gen2": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "unlimited-memory",
+          "tone": "good"
+        },
+        {
+          "text": "support-game-id",
+          "tone": "good"
+        },
+        {
+          "text": "oled-display",
+          "tone": "good"
+        },
+        {
+          "text": "open-source",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт PSxMemCard Gen2",
+          "url": "https://sd2psxtd.github.io",
+          "comment": "Официальный сайт карты памяти"
+        },
+        {
+          "text": "Прошивка PSxMemCard Gen2",
+          "url": "https://github.com/sd2psXtd/firmware/releases",
+          "comment": "Ссылка на релизы прошивок на GitHub"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Consoles Support",
+          "items": [
+            "ps1",
+            "ps2"
+          ]
+        }
+      ],
+      "type": "accessory",
+      "comment": "Smoke Black - sd2psXtd",
+      "emoji": "📦",
+      "text": "Bitfunx - PSxMemCard Gen2",
+      "icon": "assets/bitfunx/psxmemcard.png"
     }
   },
   "sections": [
     {
       "title": "Боксы",
       "items": [
-        "box-1",
-        "box-2"
+        "box-n64",
+        "box-ps1",
+        "box-fc",
+        "box-sms",
+        "box-gen"
       ]
     },
     {
