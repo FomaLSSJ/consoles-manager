@@ -117,8 +117,7 @@ main {
   height: 80%;
   object-fit: contain;
   display: block;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 .icon.cover img { object-fit: cover; }

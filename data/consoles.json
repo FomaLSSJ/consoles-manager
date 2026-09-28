@@ -131,7 +131,7 @@
     },
     "ps1": {
       "type": "etc",
-      "icon": "assets/ps1.png",
+      "icon": "assets/sony/playstation.png",
       "emoji": "🎮",
       "title": "Sony PlayStation",
       "desc": "32-bit, 5-gen, Japan, 1994",
@@ -160,7 +160,7 @@
     },
     "avfc": {
       "type": "etc",
-      "icon": "assets/avfc.png",
+      "icon": "assets/nintendo/av-famicom.png",
       "emoji": "🕹️",
       "title": "Nintendo AV Famicom",
       "desc": "8-bit, 3-gen, Japan, 1993",
@@ -198,7 +198,7 @@
     },
     "sfc": {
       "type": "etc",
-      "icon": "assets/snes.png",
+      "icon": "assets/nintendo/super-famicom.png",
       "emoji": "🕹️",
       "title": "Nintendo Super Famicom",
       "desc": "16-bit, 4-gen, Japan, 1994",
@@ -214,6 +214,7 @@
           "items": [
             "power-unit-9v2a",
             "cable-scart-rgb-multiout-csync",
+            "sd2snes",
             "super-gameboy",
             "brook-wingman-snes"
           ]
@@ -224,7 +225,7 @@
     },
     "gen": {
       "type": "etc",
-      "icon": "assets/sega-md.png",
+      "icon": "assets/sega/genesis.png",
       "emoji": "🕹️",
       "title": "Sega Genesis",
       "desc": "16-bit, 4-gen, USA, 1988",
@@ -251,7 +252,7 @@
     },
     "dc": {
       "type": "etc",
-      "icon": "assets/dreamcast.png",
+      "icon": "assets/sega/dreamcast.png",
       "emoji": "🌀",
       "title": "Sega Dreamcast",
       "desc": "32-bit, 6-gen, Japan, 1998",
@@ -259,7 +260,7 @@
         {
           "title": "Hardware",
           "items": [
-            "console-sega-dreamcast",
+            "console-dreamcast",
             "vmu",
             "dc-controller"
           ]
@@ -280,6 +281,10 @@
       "type": "console",
       "text": "Sony PlayStation",
       "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
         {
           "text": "xstation-mod",
           "tone": "good"
@@ -342,35 +347,6 @@
       "emoji": "🎮",
       "icon": "assets/nintendo/super-famicom.png",
       "cover": true,
-      "comment": "NTSC-J"
-    },
-    "console-sega-dreamcast": {
-      "title": "",
-      "desc": "",
-      "tags": [
-        {
-          "text": "original",
-          "tone": "good"
-        },
-        {
-          "text": "gdemu-ode-mod",
-          "tone": "good"
-        },
-        {
-          "text": "12v-psu-mod",
-          "tone": "good"
-        },
-        {
-          "text": "battary-mod",
-          "tone": "good"
-        }
-      ],
-      "links": [],
-      "sections": [],
-      "type": "console",
-      "text": "Sega Dreamcast",
-      "emoji": "🎮",
-      "icon": "assets/sega/dreamcast.png",
       "comment": "NTSC-J"
     },
     "fc-dogbone-gamepad": {
@@ -580,6 +556,12 @@
       "links": [],
       "sections": [
         {
+          "title": "Hardware",
+          "items": [
+            "console-saturn"
+          ]
+        },
+        {
           "title": "Accessories",
           "items": [
             "power-unit-12v3a",
@@ -626,6 +608,13 @@
       "links": [],
       "sections": [
         {
+          "title": "Hardware",
+          "items": [
+            "console-gamecube",
+            "game-boy-player"
+          ]
+        },
+        {
           "title": "Accessories",
           "items": [
             "power-unit-12v3a",
@@ -637,7 +626,7 @@
       ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/nintendo/gc.png",
+      "icon": "assets/nintendo/gamecube.png",
       "text": ""
     },
     "ps2": {
@@ -646,6 +635,12 @@
       "tags": [],
       "links": [],
       "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-playstation-2"
+          ]
+        },
         {
           "title": "Accessories",
           "items": [
@@ -657,7 +652,7 @@
       ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/sony/ps2.png",
+      "icon": "assets/sony/playstation2.png",
       "cover": true,
       "text": ""
     },
@@ -690,7 +685,7 @@
       ],
       "type": "etc",
       "emoji": "🕹️",
-      "icon": "assets/nec/pce.png",
+      "icon": "assets/nec/pc-engine.png",
       "cover": false
     },
     "wii": {
@@ -698,37 +693,65 @@
       "desc": "32-bit, 7-gen, Europe, 2006",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-wii"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "asswts/nintendo/wii.png"
+      "icon": "assets/nintendo/wii.png"
     },
     "ps3": {
       "title": "Sony PlayStation 3",
       "desc": "32-bit, 7-gen, Slim, Europe, 2009",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-playstation-3"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/sony/ps3.png"
+      "icon": "assets/sony/playstation3.png"
     },
     "x360": {
       "title": "Microsoft Xbox 360",
       "desc": "32-bit, 7-gen, Slim, Europe, 2010 ",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-xbox-360"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/microsoft/x360.png"
+      "icon": "assets/microsoft/xbox-360.png"
     },
     "wiiu": {
       "title": "Nintendo WiiU",
       "desc": "32-bit, 8-gen, Europe, 2012",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-wiiu"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
       "icon": "assets/nintendo/wiiu.png"
@@ -738,20 +761,34 @@
       "desc": "64-bit, 8-gen, Slim, Europe, 2013",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-playstation-4"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/sony/ps4.png"
+      "icon": "assets/sony/playstation4.png"
     },
     "sw": {
       "title": "Nintendo Switch",
       "desc": "64-bit, 8-gen, Europe, 2017",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-switch"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/nintendo/sw.png",
+      "icon": "assets/nintendo/switch.png",
       "cover": true
     },
     "xsx": {
@@ -759,10 +796,17 @@
       "desc": "64-bit, 9-gen, Europe, 2020",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-xbox-series-x"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/microsoft/xsx.png",
+      "icon": "assets/microsoft/xbox-series-x.png",
       "cover": true
     },
     "ps5": {
@@ -770,20 +814,34 @@
       "desc": "64-bit, 9-gen, Europe, 2020",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-playstation-5"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/sony/ps5.png"
+      "icon": "assets/sony/playstation5.png"
     },
     "sw2": {
       "title": "Nintendo Switch 2",
       "desc": "64-bit, 9-gen, Europe, 2025",
       "tags": [],
       "links": [],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Hardware",
+          "items": [
+            "console-switch-2"
+          ]
+        }
+      ],
       "type": "etc",
       "emoji": "🎮",
-      "icon": "assets/nintendo/sw2.png"
+      "icon": "assets/nintendo/switch2.png"
     },
     "console-pc-engine": {
       "title": "NEC PC-Engine",
@@ -802,7 +860,7 @@
       "sections": [],
       "type": "console",
       "emoji": "📦",
-      "icon": "assets/nec/pce.png",
+      "icon": "assets/nec/pc-engine.png",
       "comment": "NTSC-J"
     },
     "famicom-disk-system": {
@@ -911,7 +969,7 @@
     "krikzz-everdrive-n8-pro": {
       "type": "cartridge",
       "text": "Krikzz Everdrive N8 Pro",
-      "icon": "assets/nintendo/everdriven8pro.png",
+      "icon": "assets/nintendo/fc-cartridge.png",
       "comment": "Флеш-картридж в форм-факторе Fami",
       "tags": [
         {
@@ -1158,7 +1216,7 @@
       "sections": [],
       "type": "console",
       "emoji": "📦",
-      "icon": "assets/nec/n64.png",
+      "icon": "assets/nintendo/n64.png",
       "comment": "NTSC-J"
     },
     "n64-expansion-pak": {
@@ -1269,7 +1327,7 @@
       "sections": [],
       "type": "console",
       "emoji": "📦",
-      "icon": "assets/nec/pce.png",
+      "icon": "assets/nec/pc-engine-duo.png",
       "comment": "NTSC-J"
     },
     "pce-cd-rom-unit": {
@@ -1289,7 +1347,7 @@
       "sections": [],
       "type": "accessory",
       "emoji": "📦",
-      "icon": "assets/nec/cdromunit.png"
+      "icon": "assets/nec/cd-rom-unit.png"
     },
     "pce-interface-unit": {
       "title": "NEC PC-Engine Interface Unit",
@@ -1312,7 +1370,7 @@
       "sections": [],
       "type": "accessory",
       "emoji": "📦",
-      "icon": "assets/nec/interfaceunit.png"
+      "icon": "assets/nec/interface-unit.png"
     },
     "8bitdo-pce-gamepad": {
       "title": "8BitDo PCE 2.4Ghz",
@@ -1434,7 +1492,7 @@
     },
     "box-n64": {
       "title": "Box — Nintendo 64",
-      "desc": "9-я секция в стелаже",
+      "desc": "20-я секция в стелаже",
       "tags": [],
       "links": [],
       "sections": [
@@ -1449,7 +1507,7 @@
         }
       ],
       "type": "box",
-      "shelf": 9,
+      "shelf": 20,
       "icon": "assets/etc/box.png",
       "emoji": "📦"
     },
@@ -1458,7 +1516,7 @@
       "icon": "assets/etc/box.png",
       "emoji": "📦",
       "title": "Box — Famicom",
-      "desc": "12-я секция в стелаже",
+      "desc": "16-я секция в стелаже",
       "sections": [
         {
           "title": "Сontents",
@@ -1468,7 +1526,8 @@
             "cable-scart-rgb-multiout-csync",
             "krikzz-everdrive-n8-pro",
             "fc-dogbone-gamepad",
-            "8bitdo-n30-gamepad"
+            "8bitdo-n30-gamepad",
+            "zapper-gray"
           ]
         },
         {
@@ -1481,14 +1540,14 @@
       ],
       "tags": [],
       "links": [],
-      "shelf": 12
+      "shelf": 16
     },
     "box-ps1": {
       "type": "box",
       "icon": "assets/etc/box.png",
       "emoji": "📦",
       "title": "Box — PlayStation",
-      "desc": "10-я секция в стелаже",
+      "desc": "15-я секция в стелаже",
       "sections": [
         {
           "title": "Сontents",
@@ -1502,7 +1561,7 @@
       ],
       "tags": [],
       "links": [],
-      "shelf": 10
+      "shelf": 15
     },
     "box-sms": {
       "title": "Box — Sega Master System",
@@ -1586,7 +1645,7 @@
     },
     "box-gen": {
       "title": "Box — Sega Genesis",
-      "desc": "16-я секция в стелаже",
+      "desc": "12-я секция в стелаже",
       "tags": [],
       "links": [],
       "sections": [
@@ -1600,7 +1659,7 @@
         }
       ],
       "type": "box",
-      "shelf": 16,
+      "shelf": 12,
       "emoji": "📦",
       "icon": "assets/etc/box.png"
     },
@@ -1783,6 +1842,405 @@
       "emoji": "📦",
       "text": "Bitfunx - PSxMemCard Gen2",
       "icon": "assets/bitfunx/psxmemcard.png"
+    },
+    "console-xbox-series-x": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "рос-тест",
+          "tone": "good"
+        },
+        {
+          "text": "no-working-disk",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "comment": "PAL РСТ",
+      "text": "Microsoft Xbox Series X",
+      "emoji": "🎮",
+      "icon": "assets/microsoft/xbox-series-x.png"
+    },
+    "sd2snes": {
+      "title": "SD2SNES",
+      "desc": "",
+      "tags": [
+        {
+          "text": "all-in-one",
+          "tone": "good"
+        },
+        {
+          "text": "super-fx",
+          "tone": "good"
+        },
+        {
+          "text": "sa-1",
+          "tone": "good"
+        },
+        {
+          "text": "dsp",
+          "tone": "good"
+        },
+        {
+          "text": "cx-4",
+          "tone": "good"
+        },
+        {
+          "text": " st010/st011",
+          "tone": "good"
+        },
+        {
+          "text": "msu-1",
+          "tone": "good"
+        },
+        {
+          "text": "rtc",
+          "tone": "good"
+        }
+      ],
+      "links": [
+        {
+          "text": "Сайт Project SD2SNES",
+          "url": "https://sd2snes.de/blog/",
+          "comment": "Информация о флеш-картридже"
+        },
+        {
+          "text": "Прошивка SD2SNES",
+          "url": "https://sd2snes.de/blog/downloads",
+          "comment": "Страница со списком прошивок"
+        }
+      ],
+      "sections": [],
+      "type": "cartridge",
+      "emoji": "📦",
+      "icon": "assets/nintendo/sfc-cartridge.png"
+    },
+    "console-saturn": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "fenrir-duo-ode-mod",
+          "tone": "good"
+        },
+        {
+          "text": "12v-psu-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "emoji": "🎮",
+      "icon": "assets/sega/saturn.png",
+      "text": "Sega Saturn",
+      "comment": "NTSC-J"
+    },
+    "console-gamecube": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "cube-ode-mod",
+          "tone": "good"
+        },
+        {
+          "text": "sd2sp2-mod",
+          "tone": "good"
+        },
+        {
+          "text": "12v-psu-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo Game Cube",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/gamecube.png",
+      "comment": "PAL"
+    },
+    "console-wii": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "custom-firmware",
+          "tone": "good"
+        },
+        {
+          "text": "25th-anniversary-bundle",
+          "tone": "good"
+        },
+        {
+          "text": "wii-motion-plus",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo Wii",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/wii.png"
+    },
+    "console-xbox-360": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "freeboot-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Microsoft Xbox 360",
+      "icon": "assets/microsoft/xbox-360.png",
+      "emoji": "🎮",
+      "comment": "PAL Slim"
+    },
+    "console-playstation-3": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "custom-firmware",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sony PlayStation 3",
+      "emoji": "🎮",
+      "icon": "assets/sony/playstation3.png",
+      "comment": "PAL"
+    },
+    "console-playstation-2": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "network-adapter",
+          "tone": "good"
+        },
+        {
+          "text": "hdd-sdcard-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sony PlayStation 2",
+      "emoji": "🎮",
+      "icon": "assets/sony/playstation2.png",
+      "comment": "PAL"
+    },
+    "console-wiiu": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "custom-firmware",
+          "tone": "good"
+        },
+        {
+          "text": "old-hack-firmware",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo WiiU",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/wiiu.png",
+      "cover": true,
+      "comment": "PAL"
+    },
+    "console-playstation-4": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sony PlayStation 4",
+      "emoji": "🎮",
+      "icon": "assets/sony/playstation4.png",
+      "comment": "PAL"
+    },
+    "console-switch": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "neutral"
+        },
+        {
+          "text": "custom-firmware",
+          "tone": "neutral"
+        },
+        {
+          "text": "no-support-online",
+          "tone": "bad"
+        },
+        {
+          "text": "boot-dongle-need",
+          "tone": "bad"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo Switch",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/switch.png",
+      "comment": "PAL"
+    },
+    "console-playstation-5": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "support-disk",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sony PlayStation 5",
+      "emoji": "🎮",
+      "icon": "assets/sony/playstation5.png",
+      "comment": "PAL"
+    },
+    "console-switch-2": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "official-firmware",
+          "tone": "neutral"
+        },
+        {
+          "text": "support-online",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Nintendo Switch 2",
+      "emoji": "🎮",
+      "icon": "assets/nintendo/switch2.png",
+      "comment": "PAL"
+    },
+    "console-dreamcast": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "gdemu-ode-mod",
+          "tone": "good"
+        },
+        {
+          "text": "12v-psu-mod",
+          "tone": "good"
+        },
+        {
+          "text": "battary-mod",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "console",
+      "text": "Sega Dreamcast",
+      "emoji": "🎮",
+      "icon": "assets/sega/dreamcast.png",
+      "comment": "NTSC-J"
+    },
+    "game-boy-player": {
+      "title": "",
+      "desc": "",
+      "tags": [
+        {
+          "text": "original",
+          "tone": "good"
+        },
+        {
+          "text": "support-gameboy",
+          "tone": "good"
+        },
+        {
+          "text": "support-gameboy-color",
+          "tone": "good"
+        },
+        {
+          "text": "support-gameboy-advance",
+          "tone": "good"
+        }
+      ],
+      "links": [],
+      "sections": [],
+      "type": "accessory",
+      "text": "Nintendo Game Boy Player",
+      "emoji": "📦",
+      "icon": "assets/nintendo/keyboard.png"
     }
   },
   "sections": [
